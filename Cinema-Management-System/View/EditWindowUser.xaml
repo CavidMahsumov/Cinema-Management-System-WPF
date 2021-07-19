@@ -1,0 +1,95 @@
+﻿<Window x:Class="Cinema_Management_System.View.EditWindowUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema_Management_System.View"
+        mc:Ignorable="d"
+        Title="EditWindowUser" Height="450" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#2e2b30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <TextBlock Margin="10,5,0,0" Text="User View " Foreground="White" FontSize="20" ></TextBlock>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button Foreground="White"
+                        Background="#2e2b30" 
+                        Content="Log Out"
+                        FontSize="20"
+                        BorderThickness="0"
+                        HorizontalAlignment="Right"
+                        >
+
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                    <TextBlock Text="Edit Profile:" FontSize="30" Margin="20,20,0,0" >
+                        
+                    </TextBlock>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                    <Label Margin="10,20,0,0" FontSize="20" Content="First Name: ">
+
+                    </Label>
+                    <Label Margin="10,20,0,0" FontSize="20" Content="Last Name: ">
+
+                    </Label>
+                    <Label Margin="10,20,0,0" FontSize="20" Content="Email: ">
+
+                    </Label>
+                    <Label Margin="10,20,0,0" FontSize="20" Content="Password: ">
+
+                    </Label>
+                        
+                    </StackPanel>
+                    <Grid Grid.Column="1">
+                        <StackPanel>
+                            <TextBox x:Name="FisrtNameTxtBox" Height="30" Margin="10,30,0,0" >
+                                
+                            </TextBox>
+                            <TextBox x:Name="LastNametxtBox" Height="30" Margin="10,21,0,0">
+
+                            </TextBox>
+                            <TextBox x:Name="EmailTxtBox" Height="30" Margin="10,30,0,0">
+
+                            </TextBox>
+                            <TextBox x:Name="PasswordTxtBox" Height="30" Margin="10,30,0,0">
+
+                            </TextBox>
+                            <Button FontSize="20" Content="SAVE" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,5,0,10" Width="150" Height="50">
+                                
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                
+                 
+                
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,153 @@
+﻿<Window x:Class="Cinema_Management_System.View.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema_Management_System.View"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="550" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#2e2b30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <TextBlock Margin="10,5,0,0" Text="User View " Foreground="White" FontSize="20" ></TextBlock>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button Foreground="White"
+                        Background="#2e2b30" 
+                        Content="Log Out"
+                        FontSize="20"
+                        BorderThickness="0"
+                        HorizontalAlignment="Right"
+                        >
+
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="1.5*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Image Source="../Images/defaultUserIcon.png ">
+                        
+                    </Image>
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button FontSize="20"  Foreground="White" Margin="7" Background="#2e2b30">
+                        Upload Photo
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <WrapPanel>
+                    <Image Margin="5,10,0,0" Source="../Images/defaultUserIcon.png"
+                           Width="30 "
+                           Height="30"
+                           
+                           >
+                        
+                    </Image>
+                        <TextBlock Margin="0,10,0,0"  FontSize="22" Text="Name LastName">
+                            
+                        </TextBlock>
+                        
+                    </WrapPanel>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <WrapPanel >
+                        <Image
+                            Width="50"
+                            Height="50"
+                            HorizontalAlignment="Left" 
+                            Margin="5,10,0,0"
+                            Source="../Images/download__3_-removebg-preview.png">
+                            
+                        </Image>
+                        <TextBlock Margin="0,18,0,0" FontSize="22" Text="Send Mail">
+                            
+                        </TextBlock>
+                    </WrapPanel>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <WrapPanel >
+                        <Image
+                            Width="50"
+                            Height="50"
+                            HorizontalAlignment="Left" 
+                            Margin="5,10,0,0"
+                            Source="../Images/3654352-200-removebg-preview.png">
+
+                        </Image>
+                        <TextBlock Margin="0,18,0,0" FontSize="22" Text="Customer">
+
+                        </TextBlock>
+                    </WrapPanel>
+                </Grid>
+                <Grid Grid.Row="5">
+                            
+                    <Button Width="170" Height="50" FontSize="20" Foreground="White" Background="Black"
+                            Content="Edit"
+                            >
+                           
+                    </Button>
+                    <Image HorizontalAlignment="Left" Width="50" Source="../Images/download__4_-removebg-preview.png">
+                        </Image>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                
+                <Image Source="../Images/backgroundUserScene-02.png">
+                    
+                </Image>
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Button Background="#2e2b30"
+                            FontSize="30" 
+                            Content="View Film"
+                            Foreground="White">
+                        
+                    </Button>
+                    <Image HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/80929932-film-circular-sign-vector-white-icon-with-soft-shadow-on-transparent-background--removebg-preview.png">
+                        
+                    </Image>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="2">
+                    <Button Background="#2e2b30"
+                            FontSize="30" 
+                            Content="View Bookings"
+                            Foreground="White">
+
+                    </Button>
+                    <Image Width="80" HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/download__6_-removebg-preview.png">
+
+                    </Image>
+                </Grid>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
