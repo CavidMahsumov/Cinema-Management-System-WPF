@@ -130,7 +130,7 @@
                     <Button Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
                             Content="View Film"
-                            Foreground="White">
+                            Foreground="White" Click="Button_Click_2">
                         
                     </Button>
                     <Image HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/80929932-film-circular-sign-vector-white-icon-with-soft-shadow-on-transparent-background--removebg-preview.png">
@@ -141,7 +141,8 @@
                     <Button Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
                             Content="View Bookings"
-                            Foreground="White">
+                            Foreground="White"
+                            Click="Button_Click_3">
 
                     </Button>
                     <Image Width="80" HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/download__6_-removebg-preview.png">

@@ -35,5 +35,16 @@ namespace Cinema_Management_System.View
             BookingWindow bookingWindow = new BookingWindow();
             bookingWindow.ShowDialog();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            BookingWindow bookingWindow = new BookingWindow();
+            bookingWindow.ShowDialog();
+        }
     }
 }
