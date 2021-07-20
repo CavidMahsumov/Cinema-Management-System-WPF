@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Cinema_Management_System">
+    <!-- DatePicker -->
+    <Style BasedOn="{x:Null}" TargetType="{x:Type DatePicker}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="110" />
+        <Setter Property="Height" Value="28" />
+        <Setter Property="Background" Value="DarkSeaGreen" />
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <!--<Setter Property="CalendarStyle" Value="{StaticResource DatePickerCalendarStyle}"/>-->
+        <Setter Property="DatePicker.CalendarStyle" Value="{StaticResource DatePickerCalendarStyle}"/>
+    </Style>
+
+    <Style x:Key="DatePickerCalendarStyle"
+   TargetType="{x:Type Calendar}"
+   BasedOn="{StaticResource {x:Type Calendar}}" />
+
+    <!-- Calendar -->
+    <Style  BasedOn="{x:Null}" TargetType="{x:Type Calendar}" >
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE4EAF0" Offset="0"/>
+                    <GradientStop Color="#FFECF0F4" Offset="0.16"/>
+                    <GradientStop Color="#FFFCFCFD" Offset="0.16"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
