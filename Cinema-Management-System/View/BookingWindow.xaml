@@ -1,0 +1,233 @@
+﻿<Window x:Class="Cinema_Management_System.View.BookingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema_Management_System.View"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="BookingWindow" Height="600" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#2e2b30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <TextBlock Margin="10,5,0,0" Text="Bookings " Foreground="White" FontSize="20" ></TextBlock>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button Foreground="White"
+                        Background="#2e2b30" 
+                        Content="Back"
+                        FontSize="25"
+                        Margin="0,0,10,0"
+                        BorderThickness="0"
+                        HorizontalAlignment="Right"
+                        >
+
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2.8*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <StackPanel>
+                        <TextBlock FontSize="20" FontFamily="Comic Sans MS" Text="Date" Margin="70,0,0,0">
+
+                        </TextBlock>
+                        <DatePicker  Height="35" Width="235" HorizontalAlignment="Left" x:Name="DatePicker" Margin="0,10,0,0">
+
+                        </DatePicker>
+                    </StackPanel>
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <StackPanel>
+                        <TextBlock FontSize="20" FontFamily="Comic Sans MS" Text="Film" Margin="70,0,0,0" >
+
+                        </TextBlock>
+                        <ComboBox Name="FilmComboBox" Height="40">
+
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <StackPanel>
+                        <TextBlock  FontSize="20" FontFamily="Comic Sans MS" Text="Time" Margin="70,0,0,0" >
+
+                        </TextBlock>
+                        <ComboBox Name="FilmComboBox1" Height="40">
+
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Button Style="{StaticResource InformButton}" FontSize="20" Content="View History" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,15,0,10" Width="200" Height="40">
+
+                    </Button>
+                    <Image    Width="30" Height="30" Source="../Images/history.png" Margin="0,5,160,0">
+
+                    </Image>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Button Style="{StaticResource InformButton}" FontSize="20" Content="View History" Foreground="White"  Background="#2e2b30" x:Name="BookSeat" Margin="0,15,0,10" Width="200" Height="40">
+
+                    </Button>
+                    <Image Width="30" Height="30" Source="../Images/Chair.png" Margin="0,5,160,0">
+
+                    </Image>
+                </Grid>
+
+
+            </Grid>
+            <Grid Grid.Column="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Image  VerticalAlignment="Top" Source="../Images/curtains.png">
+
+                    </Image>
+
+                    <Image Width="80" Margin="134,74,443,123" Height="70"  Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png">
+
+                    </Image>
+                    <TextBlock Margin="134,149,423,68" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS" RenderTransformOrigin="0.48,0.16">
+                        Avaiable
+                    </TextBlock>
+                    <Image Width="80" Margin="454,74,123,123" Height="70"  Source="../Images/GrayChair-removebg-preview.png">
+
+                    </Image>
+                    <TextBlock Margin="454,149,103,68" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS">
+                        Booked
+                    </TextBlock>
+                    <Image Width="80" Margin="304,74,273,123" Height="70"  Source="../Images/RedChair-removebg-preview.png">
+
+                    </Image>
+                    <TextBlock Margin="304,149,253,68" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS">
+                        Selected
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="344*"/>
+                        <ColumnDefinition Width="313*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Width="25" Height="50"  Margin="63,18,256.333,198" FontSize="25">A</TextBlock>
+                    <TextBlock Width="50" Height="50"  Margin="126,173,168,43" FontSize="25">1</TextBlock>
+                    <TextBlock Width="150" Height="50"  Margin="223,173,284,43" FontSize="25" Grid.ColumnSpan="2">2</TextBlock>
+                    <TextBlock Width="25" Height="50"  Margin="63,68,256.333,148" FontSize="25">B</TextBlock>
+                    <TextBlock Width="25" Height="50"  Margin="63,123,256.333,93" FontSize="25">C</TextBlock>
+                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="105,18,189.333,198">
+
+                    </Button>
+                    <Image Width="100" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="105,10,179.333,196">
+
+                    </Image>
+                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="115,68,179,148">
+
+                    </Button>
+                    <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="105,41,179,125">
+
+                    </Image>
+                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="115,118,179,98">
+
+                    </Button>
+                    <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="105,41,179,25">
+
+                    </Image>
+                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="205,18,89,198">
+
+                    </Button>
+                    <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="190,15,74,201">
+
+                    </Image>
+                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="205,70,89,146">
+
+                    </Button>
+                    <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="190,68,74,148">
+
+                    </Image>
+                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="205,118,89,98">
+
+                    </Button>
+                    <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="190,116,74,100">
+
+                    </Image>
+
+                    <Grid Grid.Column="1">
+                        <TextBlock Width="50" Height="50"  Margin="65,173,198,43" FontSize="25">3</TextBlock>
+                        <TextBlock Width="50" Height="50"  Margin="163,173,100,43" FontSize="25">4</TextBlock>
+
+                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="50,18,213,198">
+
+                        </Button>
+                        <Image Width="100" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="24,18,189,198">
+
+                        </Image>
+                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="50,68,213,148">
+
+                        </Button>
+                        <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="35,68,198,148">
+
+                        </Image>
+                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="50,123,213,93">
+
+                        </Button>
+                        <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="35,123,198,93">
+
+                        </Image>
+                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="140,18,123,198">
+
+                        </Button>
+                        <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="125,20,108,196">
+
+                        </Image>
+                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="140,73,123,143">
+
+                        </Button>
+                        <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="125,75,108,141">
+
+                        </Image>
+                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="140,123,123,93">
+
+                        </Button>
+                        <Image Width="80" Height="50" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="125,125,108,91">
+
+                        </Image>
+
+
+
+                    </Grid>
+                    
+
+                </Grid>
+
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -23,5 +23,17 @@ namespace Cinema_Management_System.View
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            EditWindowUser editWindowUser = new EditWindowUser();
+            editWindowUser.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            BookingWindow bookingWindow = new BookingWindow();
+            bookingWindow.ShowDialog();
+        }
     }
 }

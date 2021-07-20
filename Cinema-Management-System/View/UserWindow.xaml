@@ -27,6 +27,7 @@
                         FontSize="20"
                         BorderThickness="0"
                         HorizontalAlignment="Right"
+                        Click="Button_Click_1"
                         >
 
                 </Button>
@@ -53,7 +54,7 @@
 
                 </Grid>
                 <Grid Grid.Row="1">
-                    <Button FontSize="20"  Foreground="White" Margin="7" Background="#2e2b30">
+                    <Button Style="{StaticResource InformButton}"  FontSize="20"  Foreground="White" Margin="7" Background="#2e2b30">
                         Upload Photo
                     </Button>
                 </Grid>
@@ -103,14 +104,16 @@
                     </WrapPanel>
                 </Grid>
                 <Grid Grid.Row="5">
-                            
-                    <Button Width="170" Height="50" FontSize="20" Foreground="White" Background="Black"
+                    <Grid>
+                    <Button Click="Button_Click" Style="{StaticResource InformButton}" Width="170" Height="50" FontSize="20" Foreground="White" Background="Black"
                             Content="Edit"
                             >
                            
                     </Button>
-                    <Image HorizontalAlignment="Left" Width="50" Source="../Images/download__4_-removebg-preview.png">
+                    <Image Height="48" HorizontalAlignment="Left" Width="50" Source="../Images/download__4_-removebg-preview.png">
                         </Image>
+                        
+                    </Grid>    
                 </Grid>
             </Grid>
             <Grid Grid.Column="1">
@@ -124,7 +127,7 @@
                     
                 </Image>
                 <Grid Grid.Column="1" Grid.Row="1">
-                    <Button Background="#2e2b30"
+                    <Button Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
                             Content="View Film"
                             Foreground="White">
@@ -135,7 +138,7 @@
                     </Image>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="2">
-                    <Button Background="#2e2b30"
+                    <Button Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
                             Content="View Bookings"
                             Foreground="White">

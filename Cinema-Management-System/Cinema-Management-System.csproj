@@ -55,15 +55,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\BookingWindow.xaml.cs">
+      <DependentUpon>BookingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\EditWindowUser.xaml.cs">
       <DependentUpon>EditWindowUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegisterControl.xaml.cs">
       <DependentUpon>RegisterControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SelectedFilmUserControl.xaml.cs">
+      <DependentUpon>SelectedFilmUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewFilmsWindow.xaml.cs">
+      <DependentUpon>ViewFilmsWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BookingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\EditWindowUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,7 +101,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\SelectedFilmUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\UserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewFilmsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -163,6 +188,36 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\download__6_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Saveicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MicrosoftTeams-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MailIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY%40._V1_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cinemaChair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RedChair-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GrayChair-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

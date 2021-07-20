@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema_Management_System.View"
         mc:Ignorable="d"
-        Title="EditWindowUser" Height="450" Width="700">
+        Title="EditWindowUser" Height="500" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -49,40 +49,48 @@
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1.5*"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel>
-                    <Label Margin="10,20,0,0" FontSize="20" Content="First Name: ">
+                    <Label Margin="10,20,0,0" FontSize="20" FontFamily="Comic Sans MS" Content="First Name: ">
 
                     </Label>
-                    <Label Margin="10,20,0,0" FontSize="20" Content="Last Name: ">
+                    <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Last Name: ">
 
                     </Label>
-                    <Label Margin="10,20,0,0" FontSize="20" Content="Email: ">
+                    <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Email: ">
 
                     </Label>
-                    <Label Margin="10,20,0,0" FontSize="20" Content="Password: ">
+                    <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Password: ">
 
                     </Label>
                         
                     </StackPanel>
                     <Grid Grid.Column="1">
+                        
                         <StackPanel>
-                            <TextBox x:Name="FisrtNameTxtBox" Height="30" Margin="10,30,0,0" >
+                               
+                            <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="FisrtNameTxtBox" Height="30" Margin="10,30,10,0" >
                                 
                             </TextBox>
-                            <TextBox x:Name="LastNametxtBox" Height="30" Margin="10,21,0,0">
+                            <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="LastNametxtBox" Height="30" Margin="10,21,10,0">
 
                             </TextBox>
-                            <TextBox x:Name="EmailTxtBox" Height="30" Margin="10,30,0,0">
+                            <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="EmailTxtBox" Height="30" Margin="10,30,10,0">
 
                             </TextBox>
-                            <TextBox x:Name="PasswordTxtBox" Height="30" Margin="10,30,0,0">
+                            <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="PasswordTxtBox" Height="30" Margin="10,30,10,0">
 
                             </TextBox>
-                            <Button FontSize="20" Content="SAVE" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,5,0,10" Width="150" Height="50">
+                            <Grid>
+                            <Button Style="{StaticResource InformButton}" FontSize="20" Content="SAVE" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,15,0,10" Width="200" Height="40">
                                 
                             </Button>
+                                
+                            <Image Width="30" Margin="45,5,0,0" HorizontalAlignment="Left" Height="30" Source="../Images/Saveicon.png">
+                                
+                            </Image>
+                            </Grid>
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -90,6 +98,101 @@
                  
                 
             </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel>
+                <TextBlock Text="New Details:" FontSize="30" Margin="20,20,0,0" >
+
+                </TextBlock>
+                    <Grid>
+                        <WrapPanel>
+                        <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
+                            
+                        </Image>
+                            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="First Name">
+                                
+                            </TextBlock>
+                        </WrapPanel>
+                        
+                    </Grid>
+                    <Grid>
+                        <WrapPanel>
+                            <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
+
+                            </Image>
+                            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="Last Name">
+                                
+
+                            </TextBlock>
+                        </WrapPanel>
+
+                    </Grid>
+                    <Grid>
+                        <WrapPanel>
+                            <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/Mailicon.png">
+
+                            </Image>
+                            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="mail@gmail.com">
+
+
+                            </TextBlock>
+                        </WrapPanel>
+
+                    </Grid>
+                   
+
+                </StackPanel>
+
+
+                <Grid Grid.Row="1">
+                    <StackPanel>
+                        <TextBlock Text="Old Details:" FontSize="30" Margin="20,10,0,0" >
+
+                        </TextBlock>
+                        <Grid>
+                            <WrapPanel>
+                                <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
+
+                                </Image>
+                                <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="First Name">
+
+                                </TextBlock>
+                            </WrapPanel>
+
+                        </Grid>
+                        <Grid>
+                            <WrapPanel>
+                                <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
+
+                                </Image>
+                                <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="Last Name">
+
+
+                                </TextBlock>
+                            </WrapPanel>
+
+                        </Grid>
+                        <Grid>
+                            <WrapPanel>
+                                <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/Mailicon.png">
+
+                                </Image>
+                                <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="mail@gmail.com">
+
+
+                                </TextBlock>
+                            </WrapPanel>
+
+                        </Grid>
+
+
+                    </StackPanel>
+                </Grid>              
+            </Grid>
         </Grid>
+       
     </Grid>
 </Window>

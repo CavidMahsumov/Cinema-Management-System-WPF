@@ -1,5 +1,4 @@
-﻿using Cinema_Management_System.View;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cinema_Management_System
+namespace Cinema_Management_System.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ViewFilmsWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ViewFilmsWindow : Window
     {
-        public MainWindow()
+        public ViewFilmsWindow()
         {
             InitializeComponent();
-        }
-
-        private void SubmitBtn_Click(object sender, RoutedEventArgs e)
-        {
-            UserWindow userWindow = new UserWindow();
-            userWindow.ShowDialog();
         }
     }
 }

@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema_Management_System"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="600">
+        Title="MainWindow" Height="400" Width="700"
+        
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8.5*"/>
@@ -28,7 +30,7 @@
 
                 <TextBox Width="200" Height="25" Margin="10,16,10,10"></TextBox>
                 <TextBox Width="200" Height="25" Margin="10,10,10,10"></TextBox>
-                <Button x:Name="SubmitBtn" Height="25" Content="Submit" Margin="10,5,10,0">
+                <Button Style="{StaticResource InformButton}"   x:Name="SubmitBtn" Height="25" Foreground="White" Content="Submit" Margin="10,5,10,0" Click="SubmitBtn_Click">
 
                 </Button>
             </StackPanel>
@@ -39,7 +41,7 @@
                 <TextBlock Margin="40,0,0,0" Text="Dont't have an account?" >
 
                 </TextBlock>
-                <Button Margin="5 ,0,0,0" BorderThickness="0" Foreground="Blue" Content="Click Me" Background="White" >
+                <Button FontFamily="Comic Sans MS" Margin="5 ,0,0,0" BorderThickness="0" Foreground="Blue" Content="Click Me" Background="White" >
                     
                 </Button>
 
