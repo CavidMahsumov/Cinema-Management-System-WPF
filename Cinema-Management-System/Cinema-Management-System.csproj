@@ -55,6 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Film.cs" />
+    <Compile Include="Repository\FakeRepo.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\BookingHistoryWindowViewModel.cs" />
+    <Compile Include="ViewModel\BookingWindovViewModel.cs" />
+    <Compile Include="ViewModel\EditWindowViewModel.cs" />
+    <Compile Include="ViewModel\MainVindowViewModel.cs" />
+    <Compile Include="ViewModel\UserVindowViewModel.cs" />
+    <Compile Include="ViewModel\ViewFilmsWindowViewModel.cs" />
     <Compile Include="View\BookingHistoryWindow.xaml.cs">
       <DependentUpon>BookingHistoryWindow.xaml</DependentUpon>
     </Compile>

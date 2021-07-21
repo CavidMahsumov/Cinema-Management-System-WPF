@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema_Management_System.View"
         mc:Ignorable="d"
-        Title="UserWindow" Height="550" Width="800">
+        Title="UserWindow" Height="550" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

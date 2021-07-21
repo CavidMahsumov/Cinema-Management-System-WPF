@@ -24,7 +24,7 @@
                Grid.ColumnSpan="3"
                Grid.RowSpan="3"
                ></Image>
-        <Grid Background="#2e2b30" Grid.Row="1" Grid.Column="1">
+        <Grid x:Name="MainGrid" Background="#2e2b30" Grid.Row="1" Grid.Column="1">
             <StackPanel>
                 <TextBlock FontSize="20" Margin="90,10,0,0" Foreground="White" Text="Sign In"></TextBlock>
 
@@ -41,7 +41,7 @@
                 <TextBlock Margin="40,0,0,0" Text="Dont't have an account?" >
 
                 </TextBlock>
-                <Button FontFamily="Comic Sans MS" Margin="5 ,0,0,0" BorderThickness="0" Foreground="Blue" Content="Click Me" Background="White" >
+                <Button Click="Button_Click" FontFamily="Comic Sans MS" Margin="5 ,0,0,0" BorderThickness="0" Foreground="Blue" Content="Click Me" Background="White" >
                     
                 </Button>
 
