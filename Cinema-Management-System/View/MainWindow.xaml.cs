@@ -1,4 +1,6 @@
-﻿using Cinema_Management_System.View;
+﻿using Cinema_Management_System.Command;
+using Cinema_Management_System.View;
+using Cinema_Management_System.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +23,21 @@ namespace Cinema_Management_System
     /// </summary>
     public partial class MainWindow : Window
     {
-        int count;
-        public RegisterControl registerControl = new RegisterControl();
+        public RelayCommand ClickCommand { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
+            ClickCommand = new RelayCommand((s) =>
+            {
+               MessageBox.Show("Test");
+                //RegisterControlViewModel = new RegisterControlViewModel();
+
+                //MainGrid.Children.Add(new RegisterControl(RegisterControlViewModel));
+            });
+            DataContext = this;
+            //MainVindowViewModel vm = new MainVindowViewModel(MainGrid);
+            //DataContext = vm;
         }
 
         private void SubmitBtn_Click(object sender, RoutedEventArgs e)
@@ -35,15 +46,6 @@ namespace Cinema_Management_System
             //userWindow.ShowDialog();
 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ++count;
-            
-           
-            MainGrid.Children.Add(registerControl);
-           
-           
-        }
+ 
     }
 }

@@ -30,7 +30,7 @@
 
                 <TextBox Width="200" Height="25" Margin="10,16,10,10"></TextBox>
                 <TextBox Width="200" Height="25" Margin="10,10,10,10"></TextBox>
-                <Button Style="{StaticResource InformButton}"   x:Name="SubmitBtn" Height="25" Foreground="White" Content="Submit" Margin="10,5,10,0" Click="SubmitBtn_Click">
+                <Button  Style="{StaticResource InformButton}"   x:Name="SubmitBtn" Height="25" Foreground="White" Content="Submit" Margin="10,5,10,0" >
 
                 </Button>
             </StackPanel>
@@ -41,7 +41,7 @@
                 <TextBlock Margin="40,0,0,0" Text="Dont't have an account?" >
 
                 </TextBlock>
-                <Button Click="Button_Click" FontFamily="Comic Sans MS" Margin="5 ,0,0,0" BorderThickness="0" Foreground="Blue" Content="Click Me" Background="White" >
+                <Button Command="{Binding ClickCommand}" FontFamily="Comic Sans MS" Margin="5 ,0,0,0" BorderThickness="0" Foreground="Blue" Content="Click Me" Background="White" >
                     
                 </Button>
 

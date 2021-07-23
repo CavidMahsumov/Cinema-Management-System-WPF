@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Cinema_Management_System.Command
 {
-    public class RelayCommand
+    public class RelayCommand:ICommand
     {
         public event EventHandler CanExecuteChanged
         {

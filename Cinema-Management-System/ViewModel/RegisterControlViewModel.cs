@@ -12,9 +12,9 @@ namespace Cinema_Management_System.ViewModel
     public class RegisterControlViewModel:BaseViewModel
     {
        public  MainWindow mainWindow { get; set; }
-       public  UserWindow UserWindow { get; set; }
-       public  RegisterControl registerControl { get; set; }
-       public  RelayCommand submitButtonCommand { get; set; }
+        public UserWindow UserWindow { get; set; } = new UserWindow();
+        public RegisterControl registerControl { get; set; }
+       public RelayCommand submitButtonCommand { get; set; }
 
         private User user;
 
@@ -25,8 +25,7 @@ namespace Cinema_Management_System.ViewModel
         }
         public RegisterControlViewModel()
         {
-            UserWindow = new UserWindow();
-            registerControl = new RegisterControl();
+            //registerControl = new RegisterControl();
             submitButtonCommand = new RelayCommand((s) =>
               {
                   User user = new User();
@@ -36,8 +35,6 @@ namespace Cinema_Management_System.ViewModel
                   user.Email = registerControl.EmailTxtBox.Text;
                   user.Password = registerControl.PasswordTxtBox.Text;
                   UserWindow.namesurnameblock.Text = $"{user.Name} {user.Surname}";
-
-
 
                   UserWindow.ShowDialog();
                   
