@@ -22,6 +22,8 @@ namespace Cinema_Management_System
     public partial class MainWindow : Window
     {
         int count;
+        public RegisterControl registerControl = new RegisterControl();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,23 +31,18 @@ namespace Cinema_Management_System
 
         private void SubmitBtn_Click(object sender, RoutedEventArgs e)
         {
-            UserWindow userWindow = new UserWindow();
-            userWindow.ShowDialog();
+            //UserWindow userWindow = new UserWindow();
+            //userWindow.ShowDialog();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ++count;
-            RegisterControl registerControl = new RegisterControl();
-            if (count % 2 == 0)
-            {
-                MainGrid.Children.RemoveAt(1);
-
-            }
-            else
-            {
+            
+           
             MainGrid.Children.Add(registerControl);
-            }
+           
            
         }
     }

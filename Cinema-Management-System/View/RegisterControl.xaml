@@ -7,13 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="194" d:DesignWidth="227">
     
-        <Grid Background="#2e2b30" Grid.Row="1" Grid.Column="1">
+        <Grid x:Name="Grid1" Background="#2e2b30" Grid.Row="1" Grid.Column="1">
             <StackPanel>
                 <TextBlock FontSize="20" Margin="90,10,20,0" Foreground="White" Text="Sign Up"></TextBlock>
 
-                <TextBox Width="200" Height="25" Margin="10,16,10,10"></TextBox>
-                <TextBox Width="200" Height="25" Margin="10,10,10,10"></TextBox>
-                <Button Style="{StaticResource InformButton}" x:Name="SubmitBtn" Height="25" Content="Submit" Margin="10,5,10,0">
+                <TextBox x:Name="EmailTxtBox" Width="200" Height="25" Margin="10,16,10,10"></TextBox>
+                <TextBox x:Name="PasswordTxtBox" Width="200" Height="25" Margin="10,10,10,10"></TextBox>
+            <Button Command="{Binding submitButtonCommand}"  Style="{StaticResource InformButton}" x:Name="SubmitBtn" Height="25" Content="Submit" Margin="10,5,10,0">
 
                 </Button>
             </StackPanel>

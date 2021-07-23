@@ -67,10 +67,8 @@
                            >
                         
                     </Image>
-                        <TextBlock Margin="0,10,0,0"  FontSize="22" Text="Name LastName">
-                            
-                        </TextBlock>
-                        
+                        <TextBlock x:Name="namesurnameblock" Margin="0,10,0,0"  FontSize="22" Text="Name LastName"/>
+
                     </WrapPanel>
                 </Grid>
                 <Grid Grid.Row="3">
