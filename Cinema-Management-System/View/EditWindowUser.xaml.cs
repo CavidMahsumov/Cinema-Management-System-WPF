@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinema_Management_System.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace Cinema_Management_System.View
         public EditWindowUser()
         {
             InitializeComponent();
+            DataContext = new EditWindowViewModel(this);
         }
     }
 }

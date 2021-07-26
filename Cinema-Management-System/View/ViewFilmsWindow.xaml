@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema_Management_System.View"
+        xmlns:ie1="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
-        Title="ViewFilmsWindow" Height="450" Width="800"
+        Title="ViewFilmsWindow" Height="600" Width="1000"
         WindowStyle="None"
         >
     <Grid>
@@ -30,30 +31,57 @@
                         FontSize="20"
                         Margin="0,0,20,0"
                         BorderThickness="0"
+                        Command="{Binding BackButtonClick}"
                         HorizontalAlignment="Right"
                         >
 
                 </Button>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1" Background="#2e2b30">
+        <Grid x:Name="mGrid" Grid.Row="1" Background="#2e2b30">
+            
             <ListBox x:Name="mainListbox"
-                ItemsSource="{Binding Images}"
+                ItemsSource="{Binding Films}"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                Grid.Row="1"
-                Background="Transparent">
+                Background="Transparent" Grid.ColumnSpan="2"
+                     
+                     >
+                
+                
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel ></WrapPanel>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
                 <ListBox.ItemTemplate>
+                    
                     <DataTemplate>
-                        <StackPanel>
-                            <!--<Image Width="{DynamicResource Size}" Height="{DynamicResource Size}" Margin="10" Source="{Binding ImagePath}"></Image>-->
+                        
+                            <StackPanel>
+                            <StackPanel Grid.Row="0"  >
+                                <Image x:Name="Image1" Width="200" Height="200" Margin="0,8,0,0"  Source="{Binding ImagePath}">
+                                   
+
+                                </Image>
+                                <Label Width="200" Height="5" Background="#8A6034" Margin="0,4,0,0"></Label>
+                        
+                            </StackPanel>
+
+
+
+                            <StackPanel Grid.Row="1" Orientation="Vertical" >
+                                <TextBlock Foreground="White" FontFamily="Fonts/28 Days Later.ttf" x:Name="ProductNameText" Text="{Binding Name}" FontSize="14"  FontWeight="Bold" Width="180" Height="20" Margin="5,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                            </StackPanel>
+
                         </StackPanel>
+
                     </DataTemplate>
                 </ListBox.ItemTemplate>
+                <ie1:Interaction.Triggers>
+                    <ie1:EventTrigger EventName="SelectionChanged">
+                        <ie1:InvokeCommandAction Command="{Binding SelectedItemChangedCommand}" CommandParameter="{Binding ElementName=mainListbox, Path=SelectedItem}" />
+                    </ie1:EventTrigger>
+                </ie1:Interaction.Triggers>
             </ListBox>
         </Grid>
 

@@ -29,6 +29,7 @@
                         Margin="0,0,10,0"
                         BorderThickness="0"
                         HorizontalAlignment="Right"
+                        Command="{Binding BackBtnCommand}"
                         >
 
                 </Button>
@@ -197,7 +198,6 @@
                         <TextBlock Width="50" Height="50"  Margin="-62,230,325,-14" FontSize="25">3</TextBlock>
                         <TextBlock Width="50" Height="50"  Margin="65,230,198,-14" FontSize="25">4</TextBlock>
                         <TextBlock Width="50" Height="50"  Margin="156,230,107,-14" FontSize="25">5</TextBlock>
-                        <TextBlock Width="50" Height="50"  Margin="229,228,34,-12" FontSize="25">6</TextBlock>
 
                         <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="50,20,213,196">
 

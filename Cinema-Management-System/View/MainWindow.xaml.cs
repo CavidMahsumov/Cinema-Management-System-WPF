@@ -1,4 +1,4 @@
-﻿using Cinema_Management_System.Command;
+﻿using Cinema_Management_System.Extentesion;
 using Cinema_Management_System.View;
 using Cinema_Management_System.ViewModel;
 using System;
@@ -23,29 +23,16 @@ namespace Cinema_Management_System
     /// </summary>
     public partial class MainWindow : Window
     {
-        public RelayCommand ClickCommand { get; set; }
+        public RegisterControl registerControl = new RegisterControl();
 
         public MainWindow()
         {
+            ClassHelper.MainWindow = this;
             InitializeComponent();
-            ClickCommand = new RelayCommand((s) =>
-            {
-               MessageBox.Show("Test");
-                //RegisterControlViewModel = new RegisterControlViewModel();
-
-                //MainGrid.Children.Add(new RegisterControl(RegisterControlViewModel));
-            });
-            DataContext = this;
-            //MainVindowViewModel vm = new MainVindowViewModel(MainGrid);
-            //DataContext = vm;
+            DataContext = new MainVindowViewModel(MainGrid,this);
         }
 
-        private void SubmitBtn_Click(object sender, RoutedEventArgs e)
-        {
-            //UserWindow userWindow = new UserWindow();
-            //userWindow.ShowDialog();
-
-        }
- 
+  
+    
     }
 }

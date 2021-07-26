@@ -28,6 +28,7 @@
                         FontSize="20"
                         BorderThickness="0"
                         HorizontalAlignment="Right"
+                        Command="{Binding LogoutBtn}"
                         >
 
                 </Button>
@@ -83,7 +84,7 @@
 
                             </TextBox>
                             <Grid>
-                            <Button Style="{StaticResource InformButton}" FontSize="20" Content="SAVE" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,15,0,10" Width="200" Height="40">
+                                <Button Command="{Binding SaveBtn}" Style="{StaticResource InformButton}" FontSize="20" Content="SAVE" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,15,0,10" Width="200" Height="40">
                                 
                             </Button>
                                 
@@ -112,7 +113,7 @@
                         <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
                             
                         </Image>
-                            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="First Name">
+                            <TextBlock x:Name="FirstName" FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="First Name">
                                 
                             </TextBlock>
                         </WrapPanel>
@@ -123,7 +124,7 @@
                             <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
 
                             </Image>
-                            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="Last Name">
+                            <TextBlock x:Name="LastName" FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="Last Name">
                                 
 
                             </TextBlock>
@@ -135,7 +136,7 @@
                             <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/Mailicon.png">
 
                             </Image>
-                            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="mail@gmail.com">
+                            <TextBlock x:Name="Mail" FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="mail@gmail.com">
 
 
                             </TextBlock>
@@ -157,7 +158,7 @@
                                 <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
 
                                 </Image>
-                                <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="First Name">
+                                <TextBlock x:Name="oldname" FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="First Name">
 
                                 </TextBlock>
                             </WrapPanel>
@@ -168,7 +169,7 @@
                                 <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
 
                                 </Image>
-                                <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="Last Name">
+                                <TextBlock x:Name="oldLastname" FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="Last Name">
 
 
                                 </TextBlock>
@@ -180,7 +181,7 @@
                                 <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/Mailicon.png">
 
                                 </Image>
-                                <TextBlock FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="mail@gmail.com">
+                                <TextBlock x:Name="oldmail" FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="mail@gmail.com">
 
 
                                 </TextBlock>

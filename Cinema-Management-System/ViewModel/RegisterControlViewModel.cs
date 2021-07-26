@@ -1,5 +1,7 @@
 ﻿using Cinema_Management_System.Command;
+using Cinema_Management_System.Extentesion;
 using Cinema_Management_System.Models;
+using Cinema_Management_System.Repository;
 using Cinema_Management_System.View;
 using System;
 using System.Collections.Generic;
@@ -11,10 +13,10 @@ namespace Cinema_Management_System.ViewModel
 {
     public class RegisterControlViewModel:BaseViewModel
     {
+        RegisterControl RegisterControl { get; set; }
        public  MainWindow mainWindow { get; set; }
-        public UserWindow UserWindow { get; set; } = new UserWindow();
-        public RegisterControl registerControl { get; set; }
-       public RelayCommand submitButtonCommand { get; set; }
+       public  UserWindow UserWindow { get; set; }
+       public  RelayCommand submitButtonCommand { get; set; }
 
         private User user;
 
@@ -23,19 +25,23 @@ namespace Cinema_Management_System.ViewModel
             get { return user; }
             set { user = value; OnPropertyChanged(); }
         }
-        public RegisterControlViewModel()
+        public RegisterControlViewModel(RegisterControl registerControl)
         {
+            UserWindow = new UserWindow();
+            RegisterControl = registerControl;
             //registerControl = new RegisterControl();
             submitButtonCommand = new RelayCommand((s) =>
               {
-                  User user = new User();
-                  user.ID = 1;
-                  user.Name = "Cavid";
-                  user.Surname = "Mahsumov";
-                  user.Email = registerControl.EmailTxtBox.Text;
-                  user.Password = registerControl.PasswordTxtBox.Text;
-                  UserWindow.namesurnameblock.Text = $"{user.Name} {user.Surname}";
+                  FakeRepo.User = new User();
+                  FakeRepo.User.ID = 1;
+                  FakeRepo.User.Name = registerControl.NameTxtBox.Text;
+                  FakeRepo.User.Surname = registerControl.SurnameTxtBox.Text;
+                  FakeRepo.User.Email = RegisterControl.EmailTxtBox.Text;
+                  FakeRepo.User.Password = RegisterControl.PasswordTxtBox.Text;
+                  UserWindow.namesurnameblock.Text = $"{FakeRepo.User.Name} {FakeRepo.User.Surname}";
+                  FakeRepo.Users.Add(user);
 
+                  ClassHelper.MainWindow.Close();
                   UserWindow.ShowDialog();
                   
                   

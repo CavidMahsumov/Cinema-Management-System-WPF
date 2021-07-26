@@ -23,39 +23,12 @@ namespace Cinema_Management_System.View
     /// </summary>
     public partial class RegisterControl : UserControl
     {
-       MainWindow MainWindow { get; set; } 
-        public RegisterControl(RegisterControlViewModel vm)
+       
+        public RegisterControl()
         {
             InitializeComponent();
-            DataContext = vm;
-            //DataContext = new RegisterControlViewModel()
-            //{
-            //    //registerControl = this
-            //};
-            //MainWindow = new MainWindow();
-            UserWindow UserWindow = new UserWindow();
-            submitCommand = new RelayCommand((s) =>
-            {
-                User user = new User();
-                user.ID = 1;
-                user.Name = "Cavid";
-                user.Surname = "Mahsumov";
-                //user.Email = registerControl.EmailTxtBox.Text;
-                //user.Password = registerControl.PasswordTxtBox.Text;
-                //UserWindow.namesurnameblock.Text = $"{user.Name} {user.Surname}";
-
-                UserWindow.ShowDialog();
-
-
-            }
-            );
-
+            DataContext = new RegisterControlViewModel(this);
         }
-        public RelayCommand submitCommand { get; set; }
-        //private void SubmitBtn_Click(object sender, RoutedEventArgs e)
-        //{
-        //    MainWindow.registerControl.Visibility = Visibility.Hidden;
-        //}
+
     }
 }
-

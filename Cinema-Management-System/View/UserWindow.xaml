@@ -27,7 +27,7 @@
                         FontSize="20"
                         BorderThickness="0"
                         HorizontalAlignment="Right"
-                        Click="Button_Click_1"
+                        Command="{Binding LogoutBtn}"
                         >
 
                 </Button>
@@ -48,13 +48,13 @@
                     <RowDefinition Height="1.5*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <Image Source="../Images/defaultUserIcon.png ">
+                    <Image Source="../Images/defaultUserIcon.png " Name="Profilepic">
                         
                     </Image>
 
                 </Grid>
                 <Grid Grid.Row="1">
-                    <Button Style="{StaticResource InformButton}"  FontSize="20"  Foreground="White" Margin="7" Background="#2e2b30">
+                    <Button  Command="{Binding UploadPhotoBtnCommand}" Style="{StaticResource InformButton}"  FontSize="20"  Foreground="White" Margin="7" Background="#2e2b30">
                         Upload Photo
                     </Button>
                 </Grid>
@@ -103,7 +103,7 @@
                 </Grid>
                 <Grid Grid.Row="5">
                     <Grid>
-                    <Button Click="Button_Click" Style="{StaticResource InformButton}" Width="170" Height="50" FontSize="20" Foreground="White" Background="Black"
+                        <Button Command="{Binding EditCommand}" Style="{StaticResource InformButton}" Width="170" Height="50" FontSize="20" Foreground="White" Background="Black"
                             Content="Edit"
                             >
                            
@@ -125,7 +125,7 @@
                     
                 </Image>
                 <Grid Grid.Column="1" Grid.Row="1">
-                    <Button Style="{StaticResource InformButton}" Background="#2e2b30"
+                    <Button Command="{Binding ViewFilms}" Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
                             Content="View Film"
                             Foreground="White" Click="Button_Click_2">
@@ -140,7 +140,8 @@
                             FontSize="30" 
                             Content="View Bookings"
                             Foreground="White"
-                            Click="Button_Click_3">
+                            Command="{Binding ViewBookings }"
+                           >
 
                     </Button>
                     <Image Width="80" HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/download__6_-removebg-preview.png">
