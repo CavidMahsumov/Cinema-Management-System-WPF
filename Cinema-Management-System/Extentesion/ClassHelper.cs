@@ -1,4 +1,5 @@
-﻿using Cinema_Management_System.View;
+﻿using Cinema_Management_System.Models;
+using Cinema_Management_System.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,7 @@ namespace Cinema_Management_System.Extentesion
         public static  UserWindow UserWindow { get; set; }
         public static ViewFilmsWindow viewfilm { get; set; }
         public static BookingWindow BookingVindow { get; set; }
+        public static SelectedFilmUserControl selectedUserControl { get; set; }
+        public static Film Film { get; set; }
     }
 }

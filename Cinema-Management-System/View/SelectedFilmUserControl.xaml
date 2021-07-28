@@ -57,7 +57,7 @@
                     </WrapPanel>
                     
                 </StackPanel>
-                <Button Style="{StaticResource InformButton}" Foreground="White" FontSize="15" Content="Book Know" Background="#2e2b30" Margin="420,160,0,0" Height="50" Width="100"></Button>
+                <Button  Command="{Binding BookKnowButtonCommand}"  Style="{StaticResource InformButton}" Foreground="White" FontSize="15" Content="Book Know" Background="#2e2b30" Margin="420,160,0,0" Height="50" Width="100"></Button>
             
         </Grid>
         </Grid>

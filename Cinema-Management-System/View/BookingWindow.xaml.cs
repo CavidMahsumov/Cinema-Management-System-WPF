@@ -24,7 +24,7 @@ namespace Cinema_Management_System.View
         public BookingWindow()
         {
             InitializeComponent();
-            DataContext = new BookingWindovViewModel();
+            DataContext = new BookingWindovViewModel(this);
             ClassHelper.BookingVindow = this;
         }
     }

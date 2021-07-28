@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Cinema_Management_System.View"
+        xmlns:local="clr-namespace:Cinema_Management_System.View" xmlns:ie1="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         WindowStyle="None"
         Title="BookingWindow" Height="600" Width="900">
@@ -62,22 +62,19 @@
 
                 </Grid>
                 <Grid Grid.Row="1">
-                    <StackPanel>
-                        <TextBlock FontSize="20" FontFamily="Comic Sans MS" Text="Film" Margin="70,0,0,0" >
-
-                        </TextBlock>
-                        <ComboBox Name="FilmComboBox" Height="40">
-
-                        </ComboBox>
-                    </StackPanel>
+                   
                 </Grid>
-                <Grid Grid.Row="2">
+                <Grid Grid.Row="1">
                     <StackPanel>
                         <TextBlock  FontSize="20" FontFamily="Comic Sans MS" Text="Time" Margin="70,0,0,0" >
 
                         </TextBlock>
-                        <ComboBox Name="FilmComboBox1" Height="40">
-
+                        <ComboBox ItemsSource="{Binding Film.Time}" Name="FilmComboBox1" Height="40">
+                            <ie1:Interaction.Triggers>
+                                <ie1:EventTrigger EventName="SelectedTimeChangedCommand">
+                                    <ie1:InvokeCommandAction Command="{Binding SelectedTimeChangedCommand}" CommandParameter="{Binding ElementName=FilmComboBox1, Path=SelectedItem}" />
+                                </ie1:EventTrigger>
+                            </ie1:Interaction.Triggers>
                         </ComboBox>
                     </StackPanel>
                 </Grid>
