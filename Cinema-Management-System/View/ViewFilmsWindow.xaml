@@ -43,7 +43,7 @@
             <ListBox x:Name="mainListbox"
                 ItemsSource="{Binding Films}"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                Background="Transparent" Grid.ColumnSpan="2"
+                Background="Transparent" Grid.ColumnSpan="2" 
                      
                      >
                 

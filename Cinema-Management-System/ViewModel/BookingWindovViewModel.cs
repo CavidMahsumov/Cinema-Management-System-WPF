@@ -1,29 +1,43 @@
 ﻿using Cinema_Management_System.Command;
 using Cinema_Management_System.Extentesion;
 using Cinema_Management_System.Models;
+using Cinema_Management_System.Repository;
 using Cinema_Management_System.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Cinema_Management_System.ViewModel
 {
    public  class BookingWindovViewModel:BaseViewModel
     {
+        public RelayCommand BookSeatButtonCommand { get; set; }
         public RelayCommand BackBtnCommand { get; set; }
         public RelayCommand ButtonClick { get; set; }
         public RelayCommand SelectedTimeChangedCommand { get; set; }
+        public RelayCommand ShowHistoryButtonCommand { get; set; }
         private Film film;
+       
 
         public Film Film
         {
             get { return film; }
             set { film = value; OnPropertyChanged(); }
         }
+        private Button button;
 
-        public BookingWindovViewModel( BookingWindow bookingWindow)
+        public Button Button
+        {
+            get { return button; }
+            set { button = value; OnPropertyChanged(); }
+        }
+
+
+        public BookingWindovViewModel(BookingWindow bookingWindow)
         {
             Film = ClassHelper.Film;
             BackBtnCommand = new RelayCommand((b) =>
@@ -37,6 +51,34 @@ namespace Cinema_Management_System.ViewModel
             {
                 bookingWindow.FilmComboBox1.ItemsSource = ClassHelper.Film.Time;
 
+            });
+            ButtonClick = new RelayCommand((bc) =>
+            {
+                //    Button button = new Button();
+                //    button = (Button)bc;
+
+                
+                //typecast;
+
+
+
+
+            });
+            ShowHistoryButtonCommand = new RelayCommand((s) =>
+            {
+                ClassHelper.BookingVindow.Close();
+                ClassHelper.BookingHistoryWindow.ShowDialog();
+            });
+            BookSeatButtonCommand = new RelayCommand((bs) => {
+                ClassHelper.BookingVindow.Close();
+                BookingHistoryWindow bookingHistoryWindow = new BookingHistoryWindow();
+                TicketWindow ticketWindow1 = new TicketWindow();
+                ticketWindow1.UserNametxtblock.Text = FakeRepo.User.Name;
+                ticketWindow1.FilmTxtBlock.Text = ClassHelper.Film.Name;
+                bookingHistoryWindow.bookinghistoryListBox.Items.Add(ClassHelper.Film);
+                ticketWindow1.ShowDialog();
+                bookingWindow.Close();
+            
             });
         }
            

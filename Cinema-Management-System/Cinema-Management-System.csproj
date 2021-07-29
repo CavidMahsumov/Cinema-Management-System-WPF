@@ -74,6 +74,7 @@
     <Compile Include="ViewModel\MainVindowViewModel.cs" />
     <Compile Include="ViewModel\RegisterControlViewModel.cs" />
     <Compile Include="ViewModel\SelectedFilmUserControlViewModel.cs" />
+    <Compile Include="ViewModel\TicketWindowViewModel.cs" />
     <Compile Include="ViewModel\UserVindowViewModel.cs" />
     <Compile Include="ViewModel\ViewFilmsWindowViewModel.cs" />
     <Compile Include="View\BookingHistoryWindow.xaml.cs">
@@ -90,6 +91,12 @@
     </Compile>
     <Compile Include="View\SelectedFilmUserControl.xaml.cs">
       <DependentUpon>SelectedFilmUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TicketUserControl.xaml.cs">
+      <DependentUpon>TicketUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TicketWindow.xaml.cs">
+      <DependentUpon>TicketWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
@@ -134,6 +141,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SelectedFilmUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TicketUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TicketWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -260,6 +275,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\orginals.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Red.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

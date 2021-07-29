@@ -15,6 +15,8 @@ namespace Cinema_Management_System.Extentesion
         public static ViewFilmsWindow viewfilm { get; set; }
         public static BookingWindow BookingVindow { get; set; }
         public static SelectedFilmUserControl selectedUserControl { get; set; }
+        public static BookingHistoryWindow BookingHistoryWindow { get; set; }
+        public static  TicketWindow TicketWindow { get; set; }
         public static Film Film { get; set; }
     }
 }

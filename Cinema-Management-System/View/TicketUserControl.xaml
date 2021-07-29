@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Cinema_Management_System.View.TicketUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cinema_Management_System.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Image   Source="../Images/bookingSummary-01.png">
+        </Image>
+
+
+        <Image Source="../Images/bookedSuccessfully-01.png" Margin="0,-36,0,206">
+
+        </Image>
+        <StackPanel Margin="165,307,343,182">
+
+
+            <TextBlock Text="Name:" FontSize="30" Margin="10,15,23,0"/>
+            <TextBlock Text="Film:" FontSize="30" Margin="10,15,0,0"/>
+            <TextBlock Text="Time:" FontSize="30" Margin="10,15,0,0"/>
+            <TextBlock Text="Seats:" FontSize="30" Margin="10,15,0,0"/>
+        </StackPanel>
+        <StackPanel Width="80" Height="150" Margin="133,70,79,72">
+            <TextBlock Margin="10,15,0,0" Name="UserNametxtblock">
+
+            </TextBlock>
+            <TextBlock Margin="10,15,0,0" Name="FilmTxtBlock">
+
+            </TextBlock>
+            <TextBlock Margin="10,15,0,0" Name="TimeTxtBlock">
+
+            </TextBlock>
+            <TextBlock Margin="10,15,0,0" Name="SeatsTxtBlock">
+
+            </TextBlock>
+        </StackPanel>
+        <!--<Button FontFamily="Comic Sans MS" Background="Beige" Content="Log out"  Margin="154,238,50,23"/>
+        <Button   FontFamily="Comic Sans MS" Background="Beige" Content="Back To Sign-in"  Margin="47,238,151,23"/>-->
+
+
+    </Grid>
+</UserControl>

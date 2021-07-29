@@ -17,15 +17,15 @@ using System.Windows.Shapes;
 namespace Cinema_Management_System.View
 {
     /// <summary>
-    /// Interaction logic for BookingHistoryWindow.xaml
+    /// Interaction logic for TicketWindow.xaml
     /// </summary>
-    public partial class BookingHistoryWindow : Window
+    public partial class TicketWindow : Window
     {
-        public BookingHistoryWindow()
+        public TicketWindow()
         {
             InitializeComponent();
-            DataContext = new BookingHistoryWindowViewModel();
-            ClassHelper.BookingHistoryWindow = this;
+            DataContext = new TicketWindowViewModel(this);
+            ClassHelper.TicketWindow = this;
         }
     }
 }

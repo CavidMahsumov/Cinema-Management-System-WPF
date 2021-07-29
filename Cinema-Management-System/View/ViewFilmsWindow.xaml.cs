@@ -28,5 +28,7 @@ namespace Cinema_Management_System.View
             DataContext = new ViewFilmsWindowViewModel();
             
         }
+
+     
     }
 }

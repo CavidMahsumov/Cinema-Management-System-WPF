@@ -35,12 +35,12 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="2.8*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
+            <Grid Grid.Column="0" >
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -62,7 +62,7 @@
 
                 </Grid>
                 <Grid Grid.Row="1">
-                   
+
                 </Grid>
                 <Grid Grid.Row="1">
                     <StackPanel>
@@ -79,7 +79,7 @@
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="4">
-                    <Button Style="{StaticResource InformButton}" FontSize="20" Content="View History" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,15,0,10" Width="200" Height="40">
+                    <Button Command="{Binding ShowHistoryButtonCommand}" Style="{StaticResource InformButton}" FontSize="20" Content="View History" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,15,0,10" Width="200" Height="40">
 
                     </Button>
                     <Image    Width="30" Height="30" Source="../Images/history.png" Margin="0,5,160,0">
@@ -87,7 +87,7 @@
                     </Image>
                 </Grid>
                 <Grid Grid.Row="5">
-                    <Button Style="{StaticResource InformButton}" FontSize="20" Content="View History" Foreground="White"  Background="#2e2b30" x:Name="BookSeat" Margin="0,15,0,10" Width="200" Height="40">
+                    <Button Command="{Binding BookSeatButtonCommand}" Style="{StaticResource InformButton}" FontSize="20" Content="Book Seat" Foreground="White"  Background="#2e2b30" x:Name="BookSeat" Margin="0,15,0,10" Width="200" Height="40">
 
                     </Button>
                     <Image Width="30" Height="30" Source="../Images/Chair.png" Margin="0,5,160,0">
@@ -97,7 +97,7 @@
 
 
             </Grid>
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1" x:Name="Grid1">
 
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -138,118 +138,150 @@
                     <TextBlock Width="150" Height="50"  Margin="204,228,303,-12" FontSize="25" Grid.ColumnSpan="2">2</TextBlock>
                     <TextBlock Width="25" Height="50"  Margin="63,100,256,116" FontSize="25">B</TextBlock>
                     <TextBlock Width="25" Height="50"  Margin="63,173,256,43" FontSize="25">C</TextBlock>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="105,18,189.333,198">
-
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A1" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,0,0,166" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="76,0,168,166">
-
-                    </Image>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="105,100,189,116">
-
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A2" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,73,0,93" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="76,73,168,93">
-
-                    </Image>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="105,164,189,52">
-
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A3" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,155,0,11" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="76,143,168,23">
-
-                    </Image>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="190,18,104,198">
-
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A4" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,0,0,166" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="160,0,84,166">
 
-                    </Image>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="190,100,104,116">
-
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A5" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,73,0,93" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="160,73,84,93" RenderTransformOrigin="0.427,0.8">
 
-                    </Image>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="190,173,104,43">
 
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A6" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,156,0,10" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="160,143,84,23">
-
-                    </Image>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="265,23,29,193">
-
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A7" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="239,0,0,166" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="239,0,5,166"/>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="265,93,29,123">
-
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A8" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="244,73,0,93" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="240,73,4,93">
-
-                    </Image>
-                    <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="265,164,29,52">
-
+                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A9" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="239,155,0,11" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
-                    <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="240,143,4,23">
 
-                    </Image>
+
+
+
 
                     <Grid Grid.Column="1">
                         <TextBlock Width="50" Height="50"  Margin="-62,230,325,-14" FontSize="25">3</TextBlock>
                         <TextBlock Width="50" Height="50"  Margin="65,230,198,-14" FontSize="25">4</TextBlock>
                         <TextBlock Width="50" Height="50"  Margin="156,230,107,-14" FontSize="25">5</TextBlock>
 
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="50,20,213,196">
-
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A10" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,0,0,166" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="100" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="25,0,188,166">
-
-                        </Image>
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="0,93,213,123" HorizontalAlignment="Right">
-
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A11" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,73,0,93" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="80" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="25,88,188,98">
-
-                        </Image>
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="50,173,213,43">
-
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A12" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,155,0,11" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="80" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="25,160,188,26">
-
-                        </Image>
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="140,20,123,196">
-
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A13" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,0,0,166" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="80" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="115,10,98,176">
 
-                        </Image>
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="140,93,123,123">
-
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A14" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,73,0,93" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="80" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="115,88,98,98">
 
-                        </Image>
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="140,173,123,43">
 
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A15" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,155,0,11" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="80" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="115,160,98,26">
-
-                        </Image>
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="215,20,48,196">
-
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A16" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,0,0,166" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="80" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="190,10,23,176">
-
-                        </Image>
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="215,105,48,111">
-
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A17" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,73,0,93" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="80" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="190,88,23,98">
-
-                        </Image>
-                        <Button Panel.ZIndex="1" Template="{StaticResource withoutMouseOverChair}" Background="Transparent" BorderThickness="0" Width="50" Height="50" Margin="215,173,48,43">
-
+                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A18" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,155,0,11" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Image Width="100" Height="80" Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Margin="190,160,23,26">
 
-                        </Image>
+
 
 
 
