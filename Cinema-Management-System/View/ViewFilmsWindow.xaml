@@ -44,7 +44,7 @@
                
             </TextBlock>
             <StackPanel>
-                <TextBox  x:Name="SearchtxtBox" Height="50" Width="400">
+                <TextBox FontSize="30"  Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="SearchtxtBox" Height="50" Width="400">
                     
                 </TextBox>
                 <Image x:Name="FilmImage" Source="{Binding ImagePath}" Width="300" Height="300">
@@ -57,11 +57,11 @@
 
                 </TextBlock>
             </StackPanel>
-            <Button Command="{Binding searchButtonClick}" Width="100" Height="50" Margin="736,0,156,468">
+            <Button Style="{StaticResource InformButton}" FontSize="20" Command="{Binding searchButtonClick}" Width="100" Height="50" Margin="736,0,156,468">
                 Search
             </Button>
 
-            <Button Command="{Binding SelectedItemChangedCommand}" FontFamily="Comic Sans MS" FontSize="20" x:Name="MoreInformation" Content="More Information" Width="200" Height="70" Margin="770,402,22,46" >
+            <Button Style="{StaticResource InformButton}" Command="{Binding SelectedItemChangedCommand}" FontFamily="Comic Sans MS" FontSize="20" x:Name="MoreInformation" Content="More Information" Width="200" Height="70" Margin="770,402,22,46" >
                 
             </Button>
             
