@@ -3,9 +3,11 @@ using Cinema_Management_System.Extentesion;
 using Cinema_Management_System.Repository;
 using Cinema_Management_System.View;
 using Microsoft.Win32;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
@@ -23,6 +25,7 @@ namespace Cinema_Management_System.ViewModel
         public MainWindow MainWindow { get; set; }
         public ViewFilmsWindow FilmVindows { get; set; }
         public RelayCommand ViewBookings { get; set; }
+
 
         public UserVindowViewModel(UserWindow userWindow)
         {
@@ -69,6 +72,7 @@ namespace Cinema_Management_System.ViewModel
                 bookingWindow.ShowDialog();
 
             });
+          
         }
     }
 }

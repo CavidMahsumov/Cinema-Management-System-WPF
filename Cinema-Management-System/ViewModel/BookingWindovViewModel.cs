@@ -21,7 +21,8 @@ namespace Cinema_Management_System.ViewModel
         public RelayCommand SelectedTimeChangedCommand { get; set; }
         public RelayCommand ShowHistoryButtonCommand { get; set; }
         private Film film;
-       
+        public string Time { get; set; }
+
 
         public Film Film
         {
@@ -50,6 +51,7 @@ namespace Cinema_Management_System.ViewModel
             SelectedTimeChangedCommand = new RelayCommand((s) =>
             {
                 bookingWindow.FilmComboBox1.ItemsSource = ClassHelper.Film.Time;
+          
 
             });
             ButtonClick = new RelayCommand((bc) =>
@@ -67,15 +69,15 @@ namespace Cinema_Management_System.ViewModel
             ShowHistoryButtonCommand = new RelayCommand((s) =>
             {
                 ClassHelper.BookingVindow.Close();
-                ClassHelper.BookingHistoryWindow.ShowDialog();
+                
             });
             BookSeatButtonCommand = new RelayCommand((bs) => {
                 ClassHelper.BookingVindow.Close();
-                BookingHistoryWindow bookingHistoryWindow = new BookingHistoryWindow();
+               
                 TicketWindow ticketWindow1 = new TicketWindow();
                 ticketWindow1.UserNametxtblock.Text = FakeRepo.User.Name;
                 ticketWindow1.FilmTxtBlock.Text = ClassHelper.Film.Name;
-                bookingHistoryWindow.bookinghistoryListBox.Items.Add(ClassHelper.Film);
+                
                 ticketWindow1.ShowDialog();
                 bookingWindow.Close();
             

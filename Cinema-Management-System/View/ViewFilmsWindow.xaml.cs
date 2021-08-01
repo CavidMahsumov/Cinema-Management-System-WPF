@@ -25,7 +25,7 @@ namespace Cinema_Management_System.View
         {
             InitializeComponent();
             ClassHelper.viewfilm = this;
-            DataContext = new ViewFilmsWindowViewModel();
+            DataContext = new ViewFilmsWindowViewModel(this);
             
         }
 

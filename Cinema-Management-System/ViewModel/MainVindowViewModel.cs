@@ -1,8 +1,10 @@
 ﻿using Cinema_Management_System.Command;
+using Cinema_Management_System.Models;
 using Cinema_Management_System.Repository;
 using Cinema_Management_System.View;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,12 +20,16 @@ namespace Cinema_Management_System.ViewModel
         public Grid MainGrid { get; set; }
         public  RelayCommand sumbitBtnClick { get; set;}
         public UserWindow UserWindow { get; set; }
+        public ObservableCollection<Admin> Admins { get; set; } = new ObservableCollection<Admin>();
 
         public MainVindowViewModel(Grid mainGrid,MainWindow mainWindow)
         {
+            AdminMainWindow adminMainWindow = new AdminMainWindow();
+
             MainGrid = mainGrid;
             mainwindow = mainWindow;
             UserWindow = new UserWindow();
+            Admins = FakeRepo.GetAdmins();
             sumbitBtnClick = new RelayCommand((b) =>
             {
                 foreach (var item in FakeRepo.Users)
@@ -35,6 +41,15 @@ namespace Cinema_Management_System.ViewModel
 
                         UserWindow.ShowDialog();
                     }
+                 
+                }
+                foreach (var item in Admins)
+                {
+                    if (item.Email == mainwindow.emailtxtBox.Text && item.Password == mainwindow.passwordtxtpox.Text)
+                    {
+                        adminMainWindow.namesurnameblock.Text = $"{item.Name} {item.Surname}";
+                        adminMainWindow.ShowDialog();
+                    }
                 }
             });
             ClickCommand = new RelayCommand((s) =>
@@ -43,5 +58,9 @@ namespace Cinema_Management_System.ViewModel
                 MainGrid.Children.Add(registerControl);
             });
         }
+    }
+
+    public class ObsarvableCollection
+    {
     }
 }

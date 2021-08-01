@@ -93,5 +93,25 @@ namespace Cinema_Management_System.Repository
             }
         };
         }
+        public static ObservableCollection<Admin> GetAdmins()
+        {
+            return new ObservableCollection<Admin>
+            {
+                new Admin
+                {
+                     Name="Cavid",
+                      Email="mehsumovcavid@gmail.com",
+                       Surname="Mahsumov",
+                        Password="Cavid123"
+                },
+                new Admin
+                {
+                     Name="Tural",
+                      Email="turaltahirli@gmail.com",
+                       Surname="Tahirli",
+                        Password="Tural123"
+                }
+            };
+        }
     }
 }

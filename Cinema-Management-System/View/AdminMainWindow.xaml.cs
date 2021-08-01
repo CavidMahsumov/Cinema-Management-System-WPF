@@ -1,6 +1,4 @@
-﻿using Cinema_Management_System.Extentesion;
-using Cinema_Management_System.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,15 +15,13 @@ using System.Windows.Shapes;
 namespace Cinema_Management_System.View
 {
     /// <summary>
-    /// Interaction logic for BookingHistoryWindow.xaml
+    /// Interaction logic for AdminMainWindow.xaml
     /// </summary>
-    public partial class BookingHistoryWindow : Window
+    public partial class AdminMainWindow : Window
     {
-        public BookingHistoryWindow()
+        public AdminMainWindow()
         {
             InitializeComponent();
-            DataContext = new BookingHistoryWindowViewModel();
-            ClassHelper.BookingHistoryWindow = this;
         }
     }
 }
