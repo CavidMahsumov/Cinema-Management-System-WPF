@@ -20,6 +20,7 @@ namespace Cinema_Management_System.Command
 
         public RelayCommand(Action<object> execute, Predicate<object> canExecute = null)
         {
+            
             if (execute == null)
             {
                 throw new NullReferenceException();

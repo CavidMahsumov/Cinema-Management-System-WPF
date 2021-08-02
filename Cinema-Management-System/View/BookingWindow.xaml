@@ -216,11 +216,60 @@
                         <TextBlock Width="50" Height="50"  Margin="156,230,107,-14" FontSize="25">5</TextBlock>
 
                         <Button Command="{Binding ButtonClick}"  Height="100" Name="A10" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,0,0,166" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border Name="border" 
+        				BorderThickness="1"
+        				Padding="4,2" 
+        				
+        				CornerRadius="3" 
+        				Background="{TemplateBinding Background}">
+                                                    <Grid >
+                                                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
+
+                                                        <ContentPresenter HorizontalAlignment="Center" 
+        	                           VerticalAlignment="Center" Name="contentShadow" 
+        					Style="{StaticResource ShadowStyle}">
+                                                            <ContentPresenter.RenderTransform>
+                                                                <TranslateTransform X="1.0" Y="1.0" />
+                                                            </ContentPresenter.RenderTransform>
+                                                        </ContentPresenter>
+                                                        <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" Name="content"/>
+                                                    </Grid>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <DataTrigger Binding="{Binding HasClicked}" Value="True">
+                                                        <Setter Property="Background" Value="Green" />
+                                                    </DataTrigger>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="border" Property="BorderBrush" Value="#00bfff" />
+                                             
+                                                    </Trigger>
+                                                    <Trigger Property="IsVisible" Value="True">
+                                                        <Setter Property="Background" >
+                                                            <Setter.Value>
+                                                                <SolidColorBrush>
+                                                                    Red
+                                                                </SolidColorBrush>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                        <Setter TargetName="content" Property="RenderTransform" >
+                                                            <Setter.Value>
+                                                                <TranslateTransform Y="1.0" />
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Trigger>
+                                                    
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
                         </Button>
                         <Button Command="{Binding ButtonClick}"  Height="100" Name="A11" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,73,0,93" >
                             <Button.Template>

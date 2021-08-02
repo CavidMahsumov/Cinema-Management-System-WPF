@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 
 namespace Cinema_Management_System.ViewModel
 {
-   public  class BookingWindovViewModel:BaseViewModel
+    public class BookingWindovViewModel : BaseViewModel
     {
         public RelayCommand BookSeatButtonCommand { get; set; }
         public RelayCommand BackBtnCommand { get; set; }
@@ -22,8 +22,16 @@ namespace Cinema_Management_System.ViewModel
         public RelayCommand ShowHistoryButtonCommand { get; set; }
         private Film film;
         public string Time { get; set; }
+        private bool hasClicked;
+        public bool HasClicked
+        {
+            get => hasClicked; set
+            {
+                hasClicked = value;
+                OnPropertyChanged();
 
-
+            }
+        }
         public Film Film
         {
             get { return film; }
@@ -51,34 +59,32 @@ namespace Cinema_Management_System.ViewModel
             SelectedTimeChangedCommand = new RelayCommand((s) =>
             {
                 bookingWindow.FilmComboBox1.ItemsSource = ClassHelper.Film.Time;
-          
+
 
             });
             ButtonClick = new RelayCommand((bc) =>
             {
+                HasClicked = !HasClicked;
                 //    Button button = new Button();
                 //    button = (Button)bc;
 
-                
                 //typecast;
 
-
-
-
             });
-           
-            BookSeatButtonCommand = new RelayCommand((bs) => {
+
+            BookSeatButtonCommand = new RelayCommand((bs) =>
+            {
                 ClassHelper.BookingVindow.Close();
-               
+
                 TicketWindow ticketWindow1 = new TicketWindow();
                 ticketWindow1.UserNametxtblock.Text = FakeRepo.User.Name;
                 ticketWindow1.FilmTxtBlock.Text = ClassHelper.Film.Name;
-                
+
                 ticketWindow1.ShowDialog();
                 bookingWindow.Close();
-            
+
             });
         }
-           
+
     }
 }
