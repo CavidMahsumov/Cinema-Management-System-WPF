@@ -127,11 +127,23 @@
                 <Image Source="../Images/backgroundUserScene-02.png">
 
                 </Image>
-                <Grid Grid.Column="1" Grid.Row="1"/>
+                <Grid Grid.Column="1" Grid.Row="1">
+
+                    <Button Command="{Binding AddButtonCommand}" Style="{StaticResource InformButton}" Background="#2e2b30"
+                            FontSize="30" 
+                            Content="Add Film"
+                            Foreground="White" >
+
+                    </Button>
+                    <Image HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/80929932-film-circular-sign-vector-white-icon-with-soft-shadow-on-transparent-background--removebg-preview.png">
+
+                    </Image>
+
+                </Grid>
                 <Grid Grid.Column="1" Grid.Row="2">
                     <Button Command="{Binding ViewFilms}" Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
-                            Content="Manage Film"
+                            Content="Remove Film"
                             Foreground="White" >
 
                     </Button>
@@ -142,7 +154,7 @@
                 <Grid Grid.Column="1" Grid.Row="3">
                     <Button Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
-                            Content="Manage Bookings"
+                            Content="View Film"
                             Foreground="White"
                             Command="{Binding ViewBookings }"
                            >

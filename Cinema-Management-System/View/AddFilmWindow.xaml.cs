@@ -16,14 +16,14 @@ using System.Windows.Shapes;
 namespace Cinema_Management_System.View
 {
     /// <summary>
-    /// Interaction logic for AdminMainWindow.xaml
+    /// Interaction logic for AddFilmWindow.xaml
     /// </summary>
-    public partial class AdminMainWindow : Window
+    public partial class AddFilmWindow : Window
     {
-        public AdminMainWindow()
+        public AddFilmWindow()
         {
             InitializeComponent();
-            DataContext = new AdminMainWindowViewModel(this);
+            DataContext = new AddFilmWindowViewModel(this);
         }
     }
 }

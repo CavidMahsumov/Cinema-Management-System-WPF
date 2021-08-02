@@ -66,11 +66,7 @@ namespace Cinema_Management_System.ViewModel
 
 
             });
-            ShowHistoryButtonCommand = new RelayCommand((s) =>
-            {
-                ClassHelper.BookingVindow.Close();
-                
-            });
+           
             BookSeatButtonCommand = new RelayCommand((bs) => {
                 ClassHelper.BookingVindow.Close();
                

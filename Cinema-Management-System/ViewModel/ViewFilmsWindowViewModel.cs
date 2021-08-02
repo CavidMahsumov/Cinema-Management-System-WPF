@@ -73,38 +73,7 @@ namespace Cinema_Management_System.ViewModel
             });
             searchButtonClick = new RelayCommand((ss) =>
             {
-                ClassHelper.Film = new Film();
-                try
-                {
-                    Film = new Film();
-                    Films = new ObservableCollection<Film>();
-                    HttpResponseMessage response = new HttpResponseMessage();
-                    response =
-                                          http.GetAsync($@"http://www.omdbapi.com/?apikey=ddee1dae&s={viewFilmsWindow.SearchtxtBox.Text}&plot=full").Result;
-                    var str = response.Content.ReadAsStringAsync().Result;
-                    Data = JsonConvert.DeserializeObject(str);
-                    response =
-                                              http.GetAsync($@"http://www.omdbapi.com/?apikey=ddee1dae&t={Data.Search[0].Title}&plot=full").Result;
-                    str = response.Content.ReadAsStringAsync().Result;
-                    SingleData = JsonConvert.DeserializeObject(str);
-
-                    ImagePath = SingleData.Poster;
-                    Minute = SingleData.Runtime;
-                    Description = SingleData.Genre;
-
-                    viewFilmsWindow.FilmImage.Source = new BitmapImage(new Uri(
-                    ImagePath, UriKind.RelativeOrAbsolute));
-                    viewFilmsWindow.FilmNameTextBloxk.Text = SingleData.Title;
-                    ClassHelper.Film.Name = SingleData.Title;
-                    ClassHelper.Film.ImagePath = SingleData.Poster;
-                    ClassHelper.Film.Description = SingleData.Genre;
-                    ClassHelper.Film.Time=SingleData.RunTime;
-                }
-                catch (Exception ex)
-                {
-
-                }
-               
+                
 
             });
         }

@@ -71,6 +71,8 @@
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Repository\FakeRepo.cs" />
+    <Compile Include="ViewModel\AddFilmWindowViewModel.cs" />
+    <Compile Include="ViewModel\AdminMainWindowViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\BookingWindovViewModel.cs" />
     <Compile Include="ViewModel\EditWindowViewModel.cs" />
@@ -80,6 +82,9 @@
     <Compile Include="ViewModel\TicketWindowViewModel.cs" />
     <Compile Include="ViewModel\UserVindowViewModel.cs" />
     <Compile Include="ViewModel\ViewFilmsWindowViewModel.cs" />
+    <Compile Include="View\AddFilmWindow.xaml.cs">
+      <DependentUpon>AddFilmWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AdminMainWindow.xaml.cs">
       <DependentUpon>AdminMainWindow.xaml</DependentUpon>
     </Compile>
@@ -112,6 +117,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddFilmWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

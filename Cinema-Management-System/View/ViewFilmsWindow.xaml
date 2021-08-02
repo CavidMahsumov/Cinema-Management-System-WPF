@@ -40,31 +40,50 @@
         </Grid>
         <Grid x:Name="mGrid" Grid.Row="1" Background="#2e2b30">
 
-            <TextBlock  FontSize="20" Margin="110,0,754,446" Foreground="White" Text="Search Film : ">
-               
-            </TextBlock>
-            <StackPanel>
-                <TextBox FontSize="30"  Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="SearchtxtBox" Height="50" Width="400">
-                    
-                </TextBox>
-                <Image x:Name="FilmImage" Source="{Binding ImagePath}" Width="300" Height="300">
-                    
-                </Image>
-                <TextBlock HorizontalAlignment="Center" Name="FilmNameTextBloxk" FontSize="20" Foreground="White"  Height="50">
-                    
-                </TextBlock>
-                <TextBlock HorizontalAlignment="Center" x:Name="FilmTimeTextBlxck" FontSize="20" Foreground="White"  Height="50">
+            <ListBox x:Name="mainListbox"
+                ItemsSource="{Binding Films}"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                Background="Transparent" Grid.ColumnSpan="2" 
+                     
+                     >
 
-                </TextBlock>
-            </StackPanel>
-            <Button Style="{StaticResource InformButton}" FontSize="20" Command="{Binding searchButtonClick}" Width="100" Height="50" Margin="736,0,156,468">
-                Search
-            </Button>
 
-            <Button Style="{StaticResource InformButton}" Command="{Binding SelectedItemChangedCommand}" FontFamily="Comic Sans MS" FontSize="20" x:Name="MoreInformation" Content="More Information" Width="200" Height="70" Margin="770,402,22,46" >
-                
-            </Button>
-            
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel ></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <StackPanel>
+                            <StackPanel Grid.Row="0"  >
+                                <Image x:Name="Image1" Width="200" Height="200" Margin="0,8,0,0"  Source="{Binding ImagePath}">
+
+
+                                </Image>
+                                <Label Width="200" Height="5" Background="#8A6034" Margin="0,4,0,0"></Label>
+
+                            </StackPanel>
+
+
+
+                            <StackPanel Grid.Row="1" Orientation="Vertical" >
+                                <TextBlock Foreground="White" FontFamily="Fonts/28 Days Later.ttf" x:Name="ProductNameText" Text="{Binding Name}" FontSize="14"  FontWeight="Bold" Width="180" Height="20" Margin="5,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ie1:Interaction.Triggers>
+                    <ie1:EventTrigger EventName="SelectionChanged">
+                        <ie1:InvokeCommandAction Command="{Binding SelectedItemChangedCommand}" CommandParameter="{Binding ElementName=mainListbox, Path=SelectedItem}" />
+                    </ie1:EventTrigger>
+                </ie1:Interaction.Triggers>
+            </ListBox>
+
         </Grid>
 
     </Grid>

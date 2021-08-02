@@ -14,84 +14,12 @@ namespace Cinema_Management_System.Repository
 
         static public User User { get; set; }
         static public User OldUser { get; set; }
+        static public ObservableCollection<Film> Films = new ObservableCollection<Film>();
 
         public static ObservableCollection<Film> getAll()
         {
-            return new ObservableCollection<Film> {
-            new Film
-            {
-                ID = 1,
-                 Name="Teen Wolf",
-                  Type="Fantastic",
-                   Description="Fantasitic",
-                    ImDb=9.1,
-                     ImagePath="../Images/teenwolf.jpg",
-                      Time=new List<string>
-                      {
-                          "17:00","13:00"
-                      }
-
-            },
-            new Film
-            {
-                ID = 2,
-                Name = "Lucifer",
-                Type = "Fantastic",
-                Description = "Fantasitic",
-                ImDb = 8.7,
-                ImagePath="../Images/lucifer.jpg",
-                Time=new List<string>{
-                    "14:00","19:00"
-                }
-
-                
-
-            },
-            new Film
-            {
-                ID = 3,
-                Name = "RiverDale",
-                Type = "Teenager",
-                Description = "Teenahger",
-                ImDb = 8.1,
-                ImagePath="../Images/riverdale.jpg"
-                ,Time=new List<string>{
-                    "19:00","22:00"
-                }
-
-
-            },
-            new Film
-            {
-                ID = 4,
-                Name = "The Vampire Diares",
-                Type = "Fantastic",
-                Description = "Fantasitic",
-                ImDb = 8.9,
-                ImagePath="../Images/vapire.jpg",
-                Time=new List<string>
-                {
-                    "20:00","14:00"
-                }
-
-            },
-             new Film
-            {
-                ID = 5,
-                Name = "The Orginals",
-                Type = "Vampires",
-                Description = "Fantasic",
-                ImDb = 8.1,
-                ImagePath="../Images/orginals.jpg",
-                Time=new List<string>{
-                    "21:00","16:00"
-                
-                }
-
-                
-
-            }
-        };
+            return Films;
+       
         }
         public static ObservableCollection<Admin> GetAdmins()
         {
