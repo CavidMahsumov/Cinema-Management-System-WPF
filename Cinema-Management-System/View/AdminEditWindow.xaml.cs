@@ -1,5 +1,4 @@
-﻿using Cinema_Management_System.Extentesion;
-using Cinema_Management_System.ViewModel;
+﻿using Cinema_Management_System.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,15 +16,15 @@ using System.Windows.Shapes;
 namespace Cinema_Management_System.View
 {
     /// <summary>
-    /// Interaction logic for AdminMainWindow.xaml
+    /// Interaction logic for AdminEditWindow.xaml
     /// </summary>
-    public partial class AdminMainWindow : Window
+    public partial class AdminEditWindow : Window
     {
-        public AdminMainWindow()
+        public AdminEditWindow()
         {
             InitializeComponent();
-            DataContext = new AdminMainWindowViewModel(this);
-            ClassHelper.adminWindow = this;
+            DataContext = new AdminEditWindowViewModel(this);
+
         }
     }
 }

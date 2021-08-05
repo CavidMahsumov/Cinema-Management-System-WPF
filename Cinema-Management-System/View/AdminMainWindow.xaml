@@ -20,7 +20,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <TextBlock Margin="10,5,0,0" Text="User View " Foreground="White" FontSize="20" ></TextBlock>
+                <TextBlock Margin="10,5,0,0" Text="Admin View " Foreground="White" FontSize="20" ></TextBlock>
             </Grid>
             <Grid Grid.Column="2">
                 <Button Foreground="White"
@@ -29,7 +29,7 @@
                         FontSize="20"
                         BorderThickness="0"
                         HorizontalAlignment="Right"
-                        Command="{Binding LogoutBtn}"
+                        Command="{Binding LogoutButtonCommand}"
                         >
 
                 </Button>
@@ -83,9 +83,9 @@
                             Source="../Images/download__3_-removebg-preview.png">
 
                         </Image>
-                        <TextBlock Margin="0,18,0,0" FontSize="22" Text="Send Mail">
+                        <Button Style="{StaticResource InformButton}" Margin="0,18,0,0" FontSize="22" Content="Send Mail">
 
-                        </TextBlock>
+                        </Button>
                     </WrapPanel>
                 </Grid>
                 <Grid Grid.Row="4">
@@ -105,7 +105,7 @@
                 </Grid>
                 <Grid Grid.Row="5">
                     <Grid>
-                        <Button Command="{Binding EditCommand}" Style="{StaticResource InformButton}" Width="170" Height="50" FontSize="20" Foreground="White" Background="Black"
+                        <Button Command="{Binding EditButtonCommand}" Style="{StaticResource InformButton}" Width="170" Height="50" FontSize="20" Foreground="White" Background="Black"
                             Content="Edit"
                             >
 

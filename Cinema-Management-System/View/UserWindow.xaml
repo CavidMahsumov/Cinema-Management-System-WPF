@@ -84,9 +84,9 @@
                             Source="../Images/download__3_-removebg-preview.png">
                             
                         </Image>
-                        <TextBlock Margin="0,18,0,0" FontSize="22" Text="Send Mail">
+                        <Button Command="{Binding SendMailbuttonCommand}" Style="{StaticResource InformButton}" Margin="0,18,0,0" FontSize="22" Content="Send Mail">
                             
-                        </TextBlock>
+                        </Button>
                     </WrapPanel>
                 </Grid>
                 <Grid Grid.Row="4">

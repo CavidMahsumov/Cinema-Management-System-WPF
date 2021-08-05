@@ -1,5 +1,6 @@
 ﻿using Cinema_Management_System.Command;
 using Cinema_Management_System.Extentesion;
+using Cinema_Management_System.Mail;
 using Cinema_Management_System.Repository;
 using Cinema_Management_System.View;
 using Microsoft.Win32;
@@ -25,7 +26,7 @@ namespace Cinema_Management_System.ViewModel
         public MainWindow MainWindow { get; set; }
         public ViewFilmsWindow FilmVindows { get; set; }
         public RelayCommand ViewBookings { get; set; }
-
+        public RelayCommand SendMailbuttonCommand { get; set; }
 
         public UserVindowViewModel(UserWindow userWindow)
         {
@@ -70,6 +71,11 @@ namespace Cinema_Management_System.ViewModel
                 ClassHelper.UserWindow.Close();
                 BookingWindow bookingWindow = new BookingWindow();
                 bookingWindow.ShowDialog();
+
+            });
+            SendMailbuttonCommand = new RelayCommand((sm) =>
+            {
+                SendMail.SendMail1(FakeRepo.User.Email);
 
             });
           

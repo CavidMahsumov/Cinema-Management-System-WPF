@@ -1,4 +1,4 @@
-﻿<Window x:Class="Cinema_Management_System.View.EditWindowUser"
+﻿<Window x:Class="Cinema_Management_System.View.AdminEditWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Cinema_Management_System.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="EditWindowUser" Height="500" Width="700">
+        WindowStyle="None"
+        Title="AdminEditWindow" Height="450" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -20,7 +21,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid x:Name="Grid" Grid.Column="0">
-                <TextBlock Margin="10,5,0,0" Text="User View " Foreground="White" FontSize="20" ></TextBlock>
+                <TextBlock Margin="10,5,0,0" Text="Admin View " Foreground="White" FontSize="20" ></TextBlock>
             </Grid>
             <Grid Grid.Column="2">
                 <Button Foreground="White"
@@ -29,7 +30,7 @@
                         FontSize="20"
                         BorderThickness="0"
                         HorizontalAlignment="Right"
-                        Command="{Binding LogoutBtn}"
+                        Command="{Binding LogoutButtonCommand}"
                         >
 
                 </Button>
@@ -45,35 +46,35 @@
                     <RowDefinition/>
                     <RowDefinition Height="4*"/>
                 </Grid.RowDefinitions>
-                    <TextBlock Text="Edit Profile:" FontSize="30" Margin="20,20,0,0" >
-                        
-                    </TextBlock>
+                <TextBlock Text="Edit Profile:" FontSize="30" Margin="20,20,0,0" >
+
+                </TextBlock>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="1.5*"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel>
-                    <Label Margin="10,20,0,0" FontSize="20" FontFamily="Comic Sans MS" Content="First Name: ">
+                        <Label Margin="10,20,0,0" FontSize="20" FontFamily="Comic Sans MS" Content="First Name: ">
 
-                    </Label>
-                    <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Last Name: ">
+                        </Label>
+                        <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Last Name: ">
 
-                    </Label>
-                    <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Email: ">
+                        </Label>
+                        <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Email: ">
 
-                    </Label>
-                    <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Password: ">
+                        </Label>
+                        <Label FontFamily="Comic Sans MS" Margin="10,20,0,0" FontSize="20" Content="Password: ">
 
-                    </Label>
-                        
+                        </Label>
+
                     </StackPanel>
                     <Grid Grid.Column="1">
-                        
+
                         <StackPanel>
-                               
+
                             <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="FisrtNameTxtBox" Height="30" Margin="10,30,10,0" >
-                                
+
                             </TextBox>
                             <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="LastNametxtBox" Height="30" Margin="10,21,10,0">
 
@@ -85,20 +86,20 @@
 
                             </TextBox>
                             <Grid>
-                                <Button Command="{Binding SaveBtn}" Style="{StaticResource InformButton}" FontSize="20" Content="SAVE" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,15,0,10" Width="200" Height="40">
-                                
-                            </Button>
-                                
-                            <Image Width="30" Margin="45,5,0,0" HorizontalAlignment="Left" Height="30" Source="../Images/Saveicon.png">
-                                
-                            </Image>
+                                <Button Command="{Binding SaveButtonCommand}" Style="{StaticResource InformButton}" FontSize="20" Content="SAVE" Foreground="White"  Background="#2e2b30" x:Name="SaveBtnEdit" Margin="0,15,0,10" Width="200" Height="40">
+
+                                </Button>
+
+                                <Image Width="30" Margin="45,5,0,0" HorizontalAlignment="Left" Height="30" Source="../Images/Saveicon.png">
+
+                                </Image>
                             </Grid>
                         </StackPanel>
                     </Grid>
                 </Grid>
-                
-                 
-                
+
+
+
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -106,19 +107,19 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <StackPanel>
-                <TextBlock Text="New Details:" FontSize="30" Margin="20,20,0,0" >
+                    <TextBlock Text="New Details:" FontSize="30" Margin="20,20,0,0" >
 
-                </TextBlock>
+                    </TextBlock>
                     <Grid>
                         <WrapPanel>
-                        <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
-                            
-                        </Image>
+                            <Image Margin="20,10,0,0" Width="30" Height="30" HorizontalAlignment="Left" Source="../Images/MicrosoftTeams-image.png">
+
+                            </Image>
                             <TextBlock x:Name="FirstName" FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="First Name">
-                                
+
                             </TextBlock>
                         </WrapPanel>
-                        
+
                     </Grid>
                     <Grid>
                         <WrapPanel>
@@ -126,7 +127,7 @@
 
                             </Image>
                             <TextBlock x:Name="LastName" FontFamily="Comic Sans MS" FontSize="20" Margin="10,10,0,0" Text="Last Name">
-                                
+
 
                             </TextBlock>
                         </WrapPanel>
@@ -144,7 +145,7 @@
                         </WrapPanel>
 
                     </Grid>
-                   
+
 
                 </StackPanel>
 
@@ -192,9 +193,9 @@
 
 
                     </StackPanel>
-                </Grid>              
+                </Grid>
             </Grid>
         </Grid>
-       
+
     </Grid>
 </Window>

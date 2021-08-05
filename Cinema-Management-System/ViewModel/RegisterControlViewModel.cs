@@ -39,7 +39,7 @@ namespace Cinema_Management_System.ViewModel
                   FakeRepo.User.Email = RegisterControl.EmailTxtBox.Text;
                   FakeRepo.User.Password = RegisterControl.PasswordTxtBox.Text;
                   UserWindow.namesurnameblock.Text = $"{FakeRepo.User.Name} {FakeRepo.User.Surname}";
-                  FakeRepo.Users.Add(user);
+                  FakeRepo.Users.Add(FakeRepo.User);
 
                   ClassHelper.MainWindow.Close();
                   UserWindow.ShowDialog();

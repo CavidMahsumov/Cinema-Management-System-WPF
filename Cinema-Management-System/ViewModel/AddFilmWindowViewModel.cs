@@ -18,6 +18,7 @@ namespace Cinema_Management_System.ViewModel
     {
         public RelayCommand SearchButtonClickCommand { get; set; }
         public RelayCommand AddButtonClickCommand { get; set; }
+        public RelayCommand BackButtonCommand { get; set; }
         private Film film;
 
         public Film Film
@@ -82,6 +83,16 @@ namespace Cinema_Management_System.ViewModel
                 FakeRepo.Films.Add(ClassHelper.Film);
 
             });
+            BackButtonCommand = new RelayCommand((b) =>
+            {
+                addFilmWindow.Close();
+
+                AdminMainWindow adminMainWindow = new AdminMainWindow();
+                adminMainWindow = ClassHelper.adminWindow;
+                adminMainWindow.ShowDialog();
+            });
+
+
         }
     }
 }

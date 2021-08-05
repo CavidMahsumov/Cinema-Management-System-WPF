@@ -46,7 +46,7 @@ namespace Cinema_Management_System.ViewModel
             
             ClassHelper.UserWindow.Close();
 
-            //Films = new ObservableCollection<Film>(FakeRepo.getAll());
+            Films = new ObservableCollection<Film>(FakeRepo.Films);
             BackButtonClick = new RelayCommand((s) =>
             {
                 ClassHelper.viewfilm.Close();

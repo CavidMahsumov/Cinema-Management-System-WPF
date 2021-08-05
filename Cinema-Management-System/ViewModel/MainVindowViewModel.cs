@@ -21,6 +21,8 @@ namespace Cinema_Management_System.ViewModel
         public  RelayCommand sumbitBtnClick { get; set;}
         public UserWindow UserWindow { get; set; }
         public ObservableCollection<Admin> Admins { get; set; } = new ObservableCollection<Admin>();
+        public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
+     
 
         public MainVindowViewModel(Grid mainGrid,MainWindow mainWindow)
         {
@@ -30,25 +32,35 @@ namespace Cinema_Management_System.ViewModel
             mainwindow = mainWindow;
             UserWindow = new UserWindow();
             Admins = FakeRepo.GetAdmins();
+            Users = FakeRepo.Users;
             sumbitBtnClick = new RelayCommand((b) =>
             {
-                foreach (var item in FakeRepo.Users)
+                if (FakeRepo.Users != null)
                 {
-                    if (item.Email == mainwindow.emailtxtBox.Text && item.Password == mainwindow.passwordtxtpox.Text)
+                    foreach (var item in Users)
                     {
-                        UserWindow.namesurnameblock.Text = $"{item.Name} {item.Surname}";
+                        if (item.Email == mainwindow.emailtxtBox.Text && item.Password == mainwindow.passwordtxtpox.Text)
+                        {
+                            UserWindow.namesurnameblock.Text = $"{item.Name} {item.Surname}";
 
 
-                        UserWindow.ShowDialog();
+                            UserWindow.ShowDialog();
+                            mainWindow.Close();
+                        }
+
                     }
-                 
                 }
-                foreach (var item in Admins)
+                if (Admins != null)
                 {
-                    if (item.Email == mainwindow.emailtxtBox.Text && item.Password == mainwindow.passwordtxtpox.Text)
+                    foreach (var item in Admins)
                     {
-                        adminMainWindow.namesurnameblock.Text = $"{item.Name} {item.Surname}";
-                        adminMainWindow.ShowDialog();
+                        if (item.Email == mainwindow.emailtxtBox.Text && item.Password == mainwindow.passwordtxtpox.Text)
+                        {
+                            FakeRepo.Admin = item;
+                            adminMainWindow.namesurnameblock.Text = $"{item.Name} {item.Surname}";
+                            adminMainWindow.ShowDialog();
+                            mainWindow.Close();
+                        }
                     }
                 }
             });

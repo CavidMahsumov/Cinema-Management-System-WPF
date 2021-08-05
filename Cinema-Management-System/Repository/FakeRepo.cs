@@ -10,11 +10,13 @@ namespace Cinema_Management_System.Repository
 {
   public  static  class FakeRepo
     {
-        static public List<User> Users { get; set; } = new List<User>();
+        static public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
 
         static public User User { get; set; }
         static public User OldUser { get; set; }
         static public ObservableCollection<Film> Films = new ObservableCollection<Film>();
+        public static Admin Admin { get; set; }
+        public static Admin OldAdmin { get; set; }
 
         public static ObservableCollection<Film> getAll()
         {
@@ -28,9 +30,9 @@ namespace Cinema_Management_System.Repository
                 new Admin
                 {
                      Name="Cavid",
-                      Email="mehsumovcavid@gmail.com",
+                      Email="1",
                        Surname="Mahsumov",
-                        Password="Cavid123"
+                        Password="1"
                 },
                 new Admin
                 {

@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema_Management_System.View"
         mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
         Title="AddFilmWindow" Height="600" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
@@ -28,7 +30,7 @@
                         FontSize="20"
                         Margin="0,0,20,0"
                         BorderThickness="0"
-                        Command="{Binding BackButtonClick}"
+                        Command="{Binding BackButtonCommand}"
                         HorizontalAlignment="Right"
                         >
 
@@ -54,11 +56,11 @@
 
                 </TextBlock>
             </StackPanel>
-            <Button Style="{StaticResource InformButton}" FontSize="20" Command="{Binding SearchButtonClickCommand}" Width="100" Height="50" Margin="738,0,154,448">
+            <Button Style="{StaticResource InformButton}" FontSize="20" Command="{Binding SearchButtonClickCommand}" Width="100" Height="50" Margin="736,10,156,458">
                 Search
             </Button>
 
-            <Button Style="{StaticResource InformButton}" Command="{Binding AddButtonClickCommand}" FontFamily="Comic Sans MS" FontSize="20" x:Name="AddFilmBtn" Content="Add Film" Width="200" Height="70" Margin="762,398,30,30" >
+            <Button Style="{StaticResource InformButton}" Command="{Binding AddButtonClickCommand}" FontFamily="Comic Sans MS" FontSize="20" x:Name="AddFilmBtn" Content="Add Film" Width="200" Height="70" Margin="759,410,33,38" >
 
             </Button>
 
