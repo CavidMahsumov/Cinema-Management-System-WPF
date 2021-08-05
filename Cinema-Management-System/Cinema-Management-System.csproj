@@ -80,6 +80,7 @@
     <Compile Include="ViewModel\EditWindowViewModel.cs" />
     <Compile Include="ViewModel\MainVindowViewModel.cs" />
     <Compile Include="ViewModel\RegisterControlViewModel.cs" />
+    <Compile Include="ViewModel\RemoveWindowViewModel.cs" />
     <Compile Include="ViewModel\SelectedFilmUserControlViewModel.cs" />
     <Compile Include="ViewModel\TicketWindowViewModel.cs" />
     <Compile Include="ViewModel\UserVindowViewModel.cs" />
@@ -101,6 +102,9 @@
     </Compile>
     <Compile Include="View\RegisterControl.xaml.cs">
       <DependentUpon>RegisterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RemoveWindow.xaml.cs">
+      <DependentUpon>RemoveWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SelectedFilmUserControl.xaml.cs">
       <DependentUpon>SelectedFilmUserControl.xaml</DependentUpon>
@@ -158,6 +162,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\RegisterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RemoveWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

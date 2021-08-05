@@ -51,6 +51,7 @@ namespace Cinema_Management_System.ViewModel
             {
                 ClassHelper.viewfilm.Close();
                 userWindow = new UserWindow();
+                userWindow.namesurnameblock.Text = $"{FakeRepo.User.Name} {FakeRepo.User.Surname}";
                 userWindow.ShowDialog();
 
             });
@@ -59,12 +60,10 @@ namespace Cinema_Management_System.ViewModel
             {
                 ClassHelper.Film.Time = new List<string>();
                 SelectedFilmUserControl selected = new SelectedFilmUserControl();
-                
                 selected.FilmNameTextBlock.Text = ClassHelper.Film.Name;
                 selected.DescriptiontextBlock.Text = ClassHelper.Film.Description;
                 selected.selectImage.Source = new BitmapImage(new Uri(
-                 ClassHelper.Film.ImagePath, UriKind.RelativeOrAbsolute));
-                //selected.Timestxtblock.Text = ClassHelper.Film.Time[0];
+                ClassHelper.Film.ImagePath, UriKind.RelativeOrAbsolute));
                 ClassHelper.Film = Film;
                 ClassHelper.viewfilm.mGrid.Children.Add(selected);
 

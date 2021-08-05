@@ -34,7 +34,7 @@ namespace Cinema_Management_System.ViewModel
                 adminEditWindow.oldLastname.Text = FakeRepo.OldAdmin.Surname;
                 adminEditWindow.oldname.Text = FakeRepo.OldAdmin.Name;
                 adminEditWindow.oldmail.Text = FakeRepo.OldAdmin.Email;
-                ClassHelper.UserWindow.namesurnameblock.Text = $"{FakeRepo.Admin.Name} {FakeRepo.Admin.Surname}";
+                ClassHelper.adminWindow.namesurnameblock.Text = $"{FakeRepo.Admin.Name} {FakeRepo.Admin.Surname}";
             });
         }
     }

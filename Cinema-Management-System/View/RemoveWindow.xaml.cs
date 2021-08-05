@@ -16,16 +16,14 @@ using System.Windows.Shapes;
 namespace Cinema_Management_System.View
 {
     /// <summary>
-    /// Interaction logic for UserWindow.xaml
+    /// Interaction logic for RemoveWindow.xaml
     /// </summary>
-    public partial class UserWindow : Window
+    public partial class RemoveWindow : Window
     {
-        public UserWindow()
+        public RemoveWindow()
         {
             InitializeComponent();
-            DataContext = new UserVindowViewModel(this);
+            DataContext = new RemoveWindowViewModel(this);
         }
-
-
     }
 }

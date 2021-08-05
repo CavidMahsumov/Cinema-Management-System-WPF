@@ -42,7 +42,7 @@
                 <TextBlock Margin="40,0,0,0" Text="Dont't have an account?" >
 
                 </TextBlock>
-                <Button Command="{Binding ClickCommand}"  FontFamily="Comic Sans MS" Margin="5 ,0,0,0" BorderThickness="0" Foreground="Blue" Content="Click Me" Background="White" >
+                <Button Template="{StaticResource  withoutMouseOverSignUp}" Command="{Binding ClickCommand}"  FontFamily="Comic Sans MS" Margin="5 ,0,0,0" BorderThickness="0" Foreground="Blue" Content="Click Me" Background="White" >
                     
                 </Button>
 

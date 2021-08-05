@@ -131,7 +131,7 @@
                     <Button Command="{Binding ViewFilms}" Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
                             Content="View Film"
-                            Foreground="White" Click="Button_Click_2">
+                            Foreground="White" >
                         
                     </Button>
                     <Image HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/80929932-film-circular-sign-vector-white-icon-with-soft-shadow-on-transparent-background--removebg-preview.png">

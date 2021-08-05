@@ -56,7 +56,7 @@
 
                 </Grid>
                 <Grid Grid.Row="1">
-                    <Button  Command="{Binding UploadPhotoBtnCommand}" Style="{StaticResource InformButton}"  FontSize="20"  Foreground="White" Margin="7" Background="#2e2b30">
+                    <Button  Command="{Binding UploadButtonCommand}" Style="{StaticResource InformButton}"  FontSize="20"  Foreground="White" Margin="7" Background="#2e2b30">
                         Upload Photo
                     </Button>
                 </Grid>
@@ -141,7 +141,7 @@
 
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="2">
-                    <Button Command="{Binding ViewFilms}" Style="{StaticResource InformButton}" Background="#2e2b30"
+                    <Button Command="{Binding RemoveButtonCommand}" Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
                             Content="Remove Film"
                             Foreground="White" >

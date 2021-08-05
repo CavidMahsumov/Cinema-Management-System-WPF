@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Cinema_Management_System.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="EditWindowUser" Height="500" Width="700">
+        Title="EditWindowUser" Height="500" Width="700"
+        WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

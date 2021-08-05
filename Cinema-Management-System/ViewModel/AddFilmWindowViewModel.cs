@@ -88,8 +88,11 @@ namespace Cinema_Management_System.ViewModel
                 addFilmWindow.Close();
 
                 AdminMainWindow adminMainWindow = new AdminMainWindow();
-                adminMainWindow = ClassHelper.adminWindow;
+
+                adminMainWindow.namesurnameblock.Text = $"{FakeRepo.Admin.Name} {FakeRepo.Admin.Surname} ";
                 adminMainWindow.ShowDialog();
+
+                
             });
 
 
