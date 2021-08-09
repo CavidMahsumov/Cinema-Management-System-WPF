@@ -46,7 +46,7 @@ namespace Cinema_Management_System.ViewModel
                 selected.selectImage.Source = new BitmapImage(new Uri(
                 ClassHelper.Film.ImagePath, UriKind.RelativeOrAbsolute)); 
                 ClassHelper.Film = Film;
-                ClassHelper.viewfilm.mGrid.Children.Add(selected);
+                ClassHelper.adminView.mGrid.Children.Add(selected);
 
 
             });
