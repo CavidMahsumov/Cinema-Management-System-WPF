@@ -75,6 +75,7 @@
     <Compile Include="ViewModel\AddFilmWindowViewModel.cs" />
     <Compile Include="ViewModel\AdminEditWindowViewModel.cs" />
     <Compile Include="ViewModel\AdminMainWindowViewModel.cs" />
+    <Compile Include="ViewModel\AdminViewWindowViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\BookingWindovViewModel.cs" />
     <Compile Include="ViewModel\EditWindowViewModel.cs" />
@@ -93,6 +94,9 @@
     </Compile>
     <Compile Include="View\AdminMainWindow.xaml.cs">
       <DependentUpon>AdminMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminViewFilmsWindow.xaml.cs">
+      <DependentUpon>AdminViewFilmsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\BookingWindow.xaml.cs">
       <DependentUpon>BookingWindow.xaml</DependentUpon>
@@ -138,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AdminMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminViewFilmsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

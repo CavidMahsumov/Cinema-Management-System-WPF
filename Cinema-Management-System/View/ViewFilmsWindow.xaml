@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Cinema_Management_System.View"
         xmlns:ie1="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="ViewFilmsWindow" Height="600" Width="1000"
         WindowStyle="None"
         >

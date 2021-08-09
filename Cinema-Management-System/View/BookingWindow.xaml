@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Cinema_Management_System.View" xmlns:ie1="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         WindowStyle="None"
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Title="BookingWindow" Height="600" Width="900">
     <Grid>

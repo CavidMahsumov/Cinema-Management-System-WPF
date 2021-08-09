@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema_Management_System.View"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="AdminMainWindow" Height="500" Width="1000"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
@@ -156,7 +157,7 @@
                             FontSize="30" 
                             Content="View Film"
                             Foreground="White"
-                            Command="{Binding ViewBookings }"
+                            Command="{Binding ViewFilmButtonCommand }"
                            >
 
                     </Button>

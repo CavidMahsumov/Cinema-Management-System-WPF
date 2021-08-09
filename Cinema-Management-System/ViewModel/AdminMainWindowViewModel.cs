@@ -20,6 +20,7 @@ namespace Cinema_Management_System.ViewModel
         public RelayCommand SendMailButtonCommand { get; set; }
         public RelayCommand EditButtonCommand { get; set; }
         public RelayCommand RemoveButtonCommand { get; set; }
+        public RelayCommand ViewFilmButtonCommand { get; set; }
         public RelayCommand UploadButtonCommand { get; set; }/// <summary>
         /// /
         /// </summary>
@@ -70,6 +71,12 @@ namespace Cinema_Management_System.ViewModel
                 {
                     adminMainWindow.Profilepic.Source = new BitmapImage(new Uri(op.FileName));
                 }
+
+            });
+            ViewFilmButtonCommand = new RelayCommand((w) =>
+            {
+                ViewFilmsWindow viewFilmsWindow = new ViewFilmsWindow();
+                viewFilmsWindow.ShowDialog();
 
             });
         }
