@@ -75,7 +75,7 @@ namespace Cinema_Management_System.ViewModel
             });
             ViewFilmButtonCommand = new RelayCommand((w) =>
             {
-                ViewFilmsWindow viewFilmsWindow = new ViewFilmsWindow();
+                AdminViewFilmsWindow viewFilmsWindow = new AdminViewFilmsWindow();
                 viewFilmsWindow.ShowDialog();
 
             });

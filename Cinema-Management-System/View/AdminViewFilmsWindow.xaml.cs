@@ -1,4 +1,5 @@
-﻿using Cinema_Management_System.ViewModel;
+﻿using Cinema_Management_System.Extentesion;
+using Cinema_Management_System.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace Cinema_Management_System.View
         {
             InitializeComponent();
             DataContext = new AdminViewWindowViewModel(this);
+            ClassHelper.adminView = this;
         }
     }
 }

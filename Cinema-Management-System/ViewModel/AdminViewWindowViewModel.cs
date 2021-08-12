@@ -16,7 +16,7 @@ namespace Cinema_Management_System.ViewModel
    public class AdminViewWindowViewModel:BaseViewModel
     {
         public ObservableCollection<Film> Films { get; set; }
-        public RelayCommand BackButtonClick { get; set; }
+        public RelayCommand BackButtonClick1 { get; set; }
         public UserWindow userWindow { get; set; }
         public RelayCommand SelectedItemChangedCommand { get; set; }
         private Film film;
@@ -31,7 +31,7 @@ namespace Cinema_Management_System.ViewModel
         public AdminViewWindowViewModel(AdminViewFilmsWindow adminViewFilmsWindow)
         {
             Films = new ObservableCollection<Film>(FakeRepo.Films);
-            BackButtonClick = new RelayCommand((back) =>
+            BackButtonClick1 = new RelayCommand((back) =>
             {
 
                 adminViewFilmsWindow.Close();
@@ -46,7 +46,7 @@ namespace Cinema_Management_System.ViewModel
                 selected.selectImage.Source = new BitmapImage(new Uri(
                 ClassHelper.Film.ImagePath, UriKind.RelativeOrAbsolute)); 
                 ClassHelper.Film = Film;
-                ClassHelper.viewfilm.mGrid.Children.Add(selected);
+                ClassHelper.adminView.mGrid.Children.Add(selected);
 
 
             });
