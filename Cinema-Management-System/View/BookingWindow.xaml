@@ -133,72 +133,71 @@
                     <TextBlock Width="150" Height="50"  Margin="204,228,303,-12" FontSize="25" Grid.ColumnSpan="2">2</TextBlock>
                     <TextBlock Width="25" Height="50"  Margin="63,100,256,116" FontSize="25">B</TextBlock>
                     <TextBlock Width="25" Height="50"  Margin="63,173,256,43" FontSize="25">C</TextBlock>
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A1" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,0,0,166" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A2" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,73,0,93" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A3" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,155,0,11" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A4" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,0,0,166" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A5" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,73,0,93" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn9" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,2,0,178" >
 
 
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A6" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,156,0,10" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A7" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="239,0,0,166" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A8" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="244,73,0,93" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button Command="{Binding ButtonClick}"  Height="100" Name="A9" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="239,155,0,11" >
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+
+
+
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn10" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,75,0,105" >
+
+
+
+
+
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn11" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,157,0,23" >
+
+
+
+
+
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn12" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,2,0,178" >
+
+
+
+
+
+                    </ToggleButton>
+
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn13" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,75,0,105" >
+
+
+
+
+
+                    </ToggleButton>
+
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn14" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,175,0,5" >
+
+
+
+
+
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn15" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="239,0,0,180" >
+
+
+
+
+
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn16" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="237,75,0,105" >
+
+
+
+
+
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn17" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="239,175,0,5" >
+
+
+
+
+
+                    </ToggleButton>
 
 
 
@@ -216,65 +215,65 @@
 
 
                         </ToggleButton>
-                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A11" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,73,0,93" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A12" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,155,0,11" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A13" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,0,0,166" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A14" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,73,0,93" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn1" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,75,0,105" >
 
 
-                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A15" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,155,0,11" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A16" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,0,0,166" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A17" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,73,0,93" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                        <Button Command="{Binding ButtonClick}"  Height="100" Name="A18" Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,155,0,11" >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" Name="imgLineItemAdd" ></Image>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
+
+
+
+                        </ToggleButton>
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn2" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,157,0,23" >
+
+
+
+
+
+                        </ToggleButton>
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn3" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,0,0,180" >
+
+
+
+
+
+                        </ToggleButton>
+
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn4" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,75,0,105" >
+
+
+
+
+
+                        </ToggleButton>
+
+
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn5" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,157,0,23" >
+
+
+
+
+
+                        </ToggleButton>
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn6" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,0,0,180" >
+
+
+
+
+
+                        </ToggleButton>
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn7" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,90,0,90" >
+
+
+
+
+
+                        </ToggleButton>
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn8" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,157,0,23" >
+
+
+
+
+
+                        </ToggleButton>
 
 
 

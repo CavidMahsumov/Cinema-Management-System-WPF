@@ -174,7 +174,7 @@
             <Trigger Property="IsChecked" Value="False">
                 <Setter Property="Content">
                     <Setter.Value>
-                        <Image Source="../Images/drink-01.png" />
+                        <Image Source="../Images/RedChair-removebg-preview.png" />
                     </Setter.Value>
                 </Setter>
             </Trigger>
