@@ -8,13 +8,17 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
-        Title="BookingWindow" Height="600" Width="900">
+        Title="BookingWindow" Height="600" Width="1000">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="281*"/>
+            <ColumnDefinition Width="720*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Background="#2e2b30">
+        <Grid Grid.Row="0" Background="#2e2b30" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -37,7 +41,7 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1" >
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="2.8*"/>
@@ -80,7 +84,7 @@
                         </ComboBox>
                     </StackPanel>
                 </Grid>
-                
+
                 <Grid Grid.Row="5">
                     <Button Command="{Binding BookSeatButtonCommand}" Style="{StaticResource InformButton}" FontSize="20" Content="Book Seat" Foreground="White"  Background="#2e2b30" x:Name="BookSeat" Margin="0,15,0,10" Width="200" Height="40">
 
@@ -95,30 +99,30 @@
             <Grid Grid.Column="1" x:Name="Grid1">
 
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition />
+                    <RowDefinition Height="1.5*" />
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <Image  VerticalAlignment="Top" Source="../Images/curtains.png">
+                <Grid Grid.Row="0" Height="100" >
+                    <Image Stretch="Fill"  VerticalAlignment="Top" Source="../Images/curtains.png" Height="195" Margin="10,-56,0,-39">
 
                     </Image>
 
-                    <Image Width="80" Margin="180,74,397,123" Height="70"  Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png">
+                    <Image Width="80" Margin="159,10,498,20" Height="70"  Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png">
 
                     </Image>
-                    <TextBlock Margin="180,149,377,68" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS" RenderTransformOrigin="0.48,0.16">
+                    <TextBlock Margin="159,78,478,-28" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS" RenderTransformOrigin="0.48,0.16">
                         Avaiable
                     </TextBlock>
-                    <Image Width="80" Margin="426,74,151,123" Height="70"  Source="../Images/GrayChair-removebg-preview.png">
+                    <Image Width="80" Margin="404,10,253,20" Height="70"  Source="../Images/GrayChair-removebg-preview.png">
 
                     </Image>
-                    <TextBlock Margin="426,144,131,73" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS">
+                    <TextBlock Margin="404,80,233,-30" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS">
                         Booked
                     </TextBlock>
-                    <Image Width="80" Margin="304,32,273,165" Height="70"  Source="../Images/RedChair-removebg-preview.png">
+                    <Image Width="80" Margin="287,-32,370,62" Height="70"  Source="../Images/RedChair-removebg-preview.png">
 
                     </Image>
-                    <TextBlock Margin="304,102,253,115" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS">
+                    <TextBlock Margin="287,38,350,12" Width="100" Height="50" FontSize="20" FontFamily="Comic Sans MS">
                         Selected
                     </TextBlock>
                 </Grid>
@@ -128,33 +132,31 @@
                         <ColumnDefinition Width="313*"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Width="25" Height="50"  Margin="63,18,256.333,198" FontSize="25">A</TextBlock>
-                    <TextBlock Width="50" Height="50"  Margin="110,228,184,-12" FontSize="25">1</TextBlock>
-                    <TextBlock Width="150" Height="50"  Margin="204,228,303,-12" FontSize="25" Grid.ColumnSpan="2">2</TextBlock>
-                    <TextBlock Width="25" Height="50"  Margin="63,100,256,116" FontSize="25">B</TextBlock>
-                    <TextBlock Width="25" Height="50"  Margin="63,173,256,43" FontSize="25">C</TextBlock>
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn9" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,2,0,178" >
+                    <TextBlock Width="25" Height="50"  Margin="10,10,350,210" FontSize="25">A</TextBlock>
+                    <TextBlock Width="25" Height="50"  Margin="10,140,351,134" FontSize="25">B</TextBlock>
+                    <TextBlock Width="25" Height="50"  Margin="8,245,353,29" FontSize="25">C</TextBlock>
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent" Height="90"  x:Name="btn9" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="34,12,0,222" >
 
 
 
 
 
                     </ToggleButton>
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn10" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,75,0,105" >
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle1}"  Background="Transparent"  Height="90"  x:Name="btn10" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="34,117,0,117" >
 
 
 
 
 
                     </ToggleButton>
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn11" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="76,157,0,23" >
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle2}"  Background="Transparent" Height="90"   x:Name="btn11" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="34,224,0,10" >
 
 
 
 
 
                     </ToggleButton>
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn12" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,2,0,178" >
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle3}"  Background="Transparent" Height="90"   x:Name="btn12" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,12,0,222" >
 
 
 
@@ -162,7 +164,7 @@
 
                     </ToggleButton>
 
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn13" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,75,0,105" >
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle4}"  Background="Transparent" Height="90"   x:Name="btn13" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,117,0,117" >
 
 
 
@@ -170,28 +172,28 @@
 
                     </ToggleButton>
 
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn14" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,175,0,5" >
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle5}"  Height="90" Background="Transparent"   x:Name="btn14" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="160,224,0,10" >
 
 
 
 
 
                     </ToggleButton>
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn15" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="239,0,0,180" >
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle6}"  Background="Transparent" Height="90"   x:Name="btn15" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="276,12,0,222" >
 
 
 
 
 
                     </ToggleButton>
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn16" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="237,75,0,105" >
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle7}"  Background="Transparent" Height="90"   x:Name="btn16" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="276,117,0,117" >
 
 
 
 
 
                     </ToggleButton>
-                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn17" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="239,175,0,5" >
+                    <ToggleButton Style="{StaticResource  OnOffToggleImageStyle8}" Height="90"  Background="Transparent"   x:Name="btn17" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="276,224,0,10" >
 
 
 
@@ -204,32 +206,29 @@
 
 
                     <Grid Grid.Column="1">
-                        <TextBlock Width="50" Height="50"  Margin="-62,230,325,-14" FontSize="25">3</TextBlock>
-                        <TextBlock Width="50" Height="50"  Margin="65,230,198,-14" FontSize="25">4</TextBlock>
-                        <TextBlock Width="50" Height="50"  Margin="156,230,107,-14" FontSize="25">5</TextBlock>
 
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,0,0,180" >
-
-
-                            
-
-
-                        </ToggleButton>
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn1" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,75,0,105" >
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle9}" Height="90"  Background="Transparent"   x:Name="btn" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,224" >
 
 
 
 
 
                         </ToggleButton>
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn2" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="26,157,0,23" >
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle10}" Height="90"  Background="Transparent"   x:Name="btn1" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="10,117,0,117" >
 
 
 
 
 
                         </ToggleButton>
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn3" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,0,0,180" >
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle11}" Height="90"  Background="Transparent"   x:Name="btn2" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="10,224,0,10" >
+
+
+
+
+
+                        </ToggleButton>
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle12}" Height="90" Background="Transparent"   x:Name="btn3" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="127,10,0,224" >
 
 
 
@@ -237,7 +236,7 @@
 
                         </ToggleButton>
 
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn4" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,75,0,105" >
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle13}" Height="90"  Background="Transparent"   x:Name="btn4" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,117,0,117" >
 
 
 
@@ -246,28 +245,28 @@
                         </ToggleButton>
 
 
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn5" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,157,0,23" >
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle14}" Height="90"  Background="Transparent"   x:Name="btn5" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="126,224,0,10" >
 
 
 
 
 
                         </ToggleButton>
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn6" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,0,0,180" >
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle15}" Height="90" Background="Transparent"   x:Name="btn6" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="241,10,0,224" >
 
 
 
 
 
                         </ToggleButton>
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn7" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,90,0,90" >
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle16}" Height="90" Background="Transparent"   x:Name="btn7" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="241,117,0,117" >
 
 
 
 
 
                         </ToggleButton>
-                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle}"  Background="Transparent"   x:Name="btn8" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="213,157,0,23" >
+                        <ToggleButton Style="{StaticResource  OnOffToggleImageStyle17}" Height="90" Background="Transparent"   x:Name="btn8" Command="{Binding ButtonClick}"  Width="100" BorderBrush="Transparent" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="241,224,0,10" >
 
 
 

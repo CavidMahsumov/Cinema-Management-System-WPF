@@ -167,21 +167,362 @@
             <Trigger Property="IsChecked" Value="True">
                 <Setter Property="Content">
                     <Setter.Value>
-                        <Image Source="../Images/Chair.png"/>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>
             <Trigger Property="IsChecked" Value="False">
                 <Setter Property="Content">
                     <Setter.Value>
-                        <Image Source="../Images/RedChair-removebg-preview.png" />
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
                     </Setter.Value>
                 </Setter>
             </Trigger>
          
         </Style.Triggers>
     </Style>
+    <Style x:Key="OnOffToggleImageStyle1" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
 
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle2" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle3" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle4" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle5" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle6" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle7" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle8" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle9" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle10" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle11" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle12" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle13" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle14" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle15" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle16" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle17" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="OnOffToggleImageStyle18" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/RedChair-removebg-preview.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/235-2359839_computer-icons-cinema-clip-art-cinema-seat-icon-removebg-preview.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
 
     <ControlTemplate x:Key="withoutMouseOverChair"
            TargetType="ToggleButton">

@@ -85,7 +85,7 @@
                             Source="../Images/download__3_-removebg-preview.png">
                             
                         </Image>
-                        <Button Command="{Binding SendMailbuttonCommand}" Style="{StaticResource InformButton}" Margin="0,18,0,0" FontSize="22" Content="Send Mail">
+                        <Button BorderThickness="0" Background="White" Command="{Binding SendMailbuttonCommand}" Margin="0,18,0,0" FontSize="22" Content="Send Mail">
                             
                         </Button>
                     </WrapPanel>
@@ -129,28 +129,19 @@
                     
                 </Image>
                 <Grid Grid.Column="1" Grid.Row="1">
+                   
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="2">
                     <Button Command="{Binding ViewFilms}" Style="{StaticResource InformButton}" Background="#2e2b30"
                             FontSize="30" 
                             Content="View Film"
                             Foreground="White" >
-                        
+
                     </Button>
                     <Image HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/80929932-film-circular-sign-vector-white-icon-with-soft-shadow-on-transparent-background--removebg-preview.png">
-                        
-                    </Image>
-                </Grid>
-                <Grid Grid.Column="1" Grid.Row="2">
-                    <Button Style="{StaticResource InformButton}" Background="#2e2b30"
-                            FontSize="30" 
-                            Content="View Bookings"
-                            Foreground="White"
-                            Command="{Binding ViewBookings }"
-                           >
-
-                    </Button>
-                    <Image Width="80" HorizontalAlignment="Left" Margin="120,0,0,0" Source="../Images/download__6_-removebg-preview.png">
 
                     </Image>
+
                 </Grid>
 
 
