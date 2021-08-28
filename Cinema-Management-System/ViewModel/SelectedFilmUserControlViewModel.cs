@@ -17,7 +17,7 @@ namespace Cinema_Management_System.ViewModel
         {
             BookKnowButtonCommand = new RelayCommand((b) =>
             {
-                ClassHelper.viewfilm.Close();
+                //ClassHelper.viewfilm.Close();
                 BookingWindow bookingWindov = new BookingWindow();
                 bookingWindov.ShowDialog();
             });

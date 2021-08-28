@@ -40,7 +40,8 @@ namespace Cinema_Management_System.ViewModel
                   FakeRepo.User.Password = RegisterControl.PasswordTxtBox.Text;
                   UserWindow.namesurnameblock.Text = $"{FakeRepo.User.Name} {FakeRepo.User.Surname}";
                   FakeRepo.Users.Add(FakeRepo.User);
-
+                  MainVindowViewModel.DataBase.Users.Add(FakeRepo.User);
+                  JsonFileHelper.JSONSerialization(MainVindowViewModel.DataBase);
                   ClassHelper.MainWindow.Close();
                   UserWindow.ShowDialog();
                   

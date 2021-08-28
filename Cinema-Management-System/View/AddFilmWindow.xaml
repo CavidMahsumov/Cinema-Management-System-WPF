@@ -33,6 +33,7 @@
                         BorderThickness="0"
                         Command="{Binding BackButtonCommand}"
                         HorizontalAlignment="Right"
+                        Template="{StaticResource  withoutMouseOverBack}"
                         >
 
                 </Button>
@@ -57,7 +58,7 @@
 
                 </TextBlock>
             </StackPanel>
-            <Button Style="{StaticResource InformButton}" FontSize="20" Command="{Binding SearchButtonClickCommand}" Width="100" Height="50" Margin="736,10,156,458">
+            <Button Style="{StaticResource InformButton}" FontSize="20" Command="{Binding SearchButtonClickCommand}" Width="100" Height="50" Margin="741,0,159,475">
                 Search
             </Button>
 

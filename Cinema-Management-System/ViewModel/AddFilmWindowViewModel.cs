@@ -69,6 +69,8 @@ namespace Cinema_Management_System.ViewModel
                     ClassHelper.Film.Time = SingleData.RunTime;
                     
                    
+                    
+                   
                 }
                 catch (Exception ex)
                 {
@@ -80,6 +82,10 @@ namespace Cinema_Management_System.ViewModel
             });
             AddButtonClickCommand = new RelayCommand((s) =>
             {
+                MainVindowViewModel.DataBase.Admins = FakeRepo.GetAdmins();
+                MainVindowViewModel.DataBase.Films.Add(ClassHelper.Film);
+
+                JsonFileHelper.JSONSerialization(MainVindowViewModel.DataBase);
                 FakeRepo.Films.Add(ClassHelper.Film);
 
             });

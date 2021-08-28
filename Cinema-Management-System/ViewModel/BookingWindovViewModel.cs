@@ -77,8 +77,8 @@ namespace Cinema_Management_System.ViewModel
                 ClassHelper.BookingVindow.Close();
 
                 TicketWindow ticketWindow1 = new TicketWindow();
-                ticketWindow1.UserNametxtblock.Text = FakeRepo.User.Name;
-                ticketWindow1.FilmTxtBlock.Text = ClassHelper.Film.Name;
+                ticketWindow1.UserNametxtblock.Text =MainVindowViewModel.DataBase.Users[0].Name;
+                ticketWindow1.FilmTxtBlock.Text = MainVindowViewModel.DataBase.Films[0].Name;
 
                 ticketWindow1.ShowDialog();
                 bookingWindow.Close();

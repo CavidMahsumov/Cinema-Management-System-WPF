@@ -66,6 +66,8 @@
     </ApplicationDefinition>
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Extentesion\ClassHelper.cs" />
+    <Compile Include="Extentesion\DataBase.cs" />
+    <Compile Include="Extentesion\JsonHelper.cs" />
     <Compile Include="Mail\SendMail.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Entity.cs" />

@@ -1,10 +1,12 @@
 ﻿using Cinema_Management_System.Command;
+using Cinema_Management_System.Extentesion;
 using Cinema_Management_System.Models;
 using Cinema_Management_System.Repository;
 using Cinema_Management_System.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +24,15 @@ namespace Cinema_Management_System.ViewModel
         public UserWindow UserWindow { get; set; }
         public ObservableCollection<Admin> Admins { get; set; } = new ObservableCollection<Admin>();
         public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
-     
+        static public DataBase DataBase = new DataBase();
+
 
         public MainVindowViewModel(Grid mainGrid,MainWindow mainWindow)
         {
+            if (File.Exists(JsonFileHelper.fileName))
+            {
+                JsonFileHelper.JSONDeSerialization(ref DataBase);
+            }
             AdminMainWindow adminMainWindow = new AdminMainWindow();
 
             MainGrid = mainGrid;
@@ -33,16 +40,17 @@ namespace Cinema_Management_System.ViewModel
             UserWindow = new UserWindow();
             Admins = FakeRepo.GetAdmins();
             Users = FakeRepo.Users;
+           
+            
             sumbitBtnClick = new RelayCommand((b) =>
             {
                 if (FakeRepo.Users != null)
                 {
-                    foreach (var item in Users)
+                    foreach (var item in DataBase.Users)
                     {
                         if (item.Email == mainwindow.emailtxtBox.Text && item.Password == mainwindow.passwordtxtpox.Text)
                         {
                             UserWindow.namesurnameblock.Text = $"{item.Name} {item.Surname}";
-
 
                             UserWindow.ShowDialog();
                             mainWindow.Close();

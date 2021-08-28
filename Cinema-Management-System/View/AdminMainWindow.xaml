@@ -31,6 +31,7 @@
                         BorderThickness="0"
                         HorizontalAlignment="Right"
                         Command="{Binding LogoutButtonCommand}"
+                        Template="{StaticResource withoutMouseOverLogOut}"
                         >
 
                 </Button>

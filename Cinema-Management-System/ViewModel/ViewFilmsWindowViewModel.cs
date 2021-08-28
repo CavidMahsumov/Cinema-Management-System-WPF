@@ -46,7 +46,7 @@ namespace Cinema_Management_System.ViewModel
             
             ClassHelper.UserWindow.Close();
 
-            Films = new ObservableCollection<Film>(FakeRepo.Films);
+            Films = MainVindowViewModel.DataBase.Films;
             BackButtonClick = new RelayCommand((s) =>
             {
                 ClassHelper.viewfilm.Close();
@@ -58,13 +58,15 @@ namespace Cinema_Management_System.ViewModel
 
             SelectedItemChangedCommand = new RelayCommand((SelectedItem) =>
             {
-                ClassHelper.Film.Time = new List<string>();
+                var fi = SelectedItem as Film;
+
+               // ClassHelper.Film.Time = new List<string>();
                 SelectedFilmUserControl selected = new SelectedFilmUserControl();
-                selected.FilmNameTextBlock.Text = ClassHelper.Film.Name;
-                selected.DescriptiontextBlock.Text = ClassHelper.Film.Description;
+                selected.FilmNameTextBlock.Text =fi.Name;
+                selected.DescriptiontextBlock.Text = fi.Description;
                 selected.selectImage.Source = new BitmapImage(new Uri(
-                ClassHelper.Film.ImagePath, UriKind.RelativeOrAbsolute));
-                ClassHelper.Film = Film;
+               fi.ImagePath, UriKind.RelativeOrAbsolute));
+               // ClassHelper.Film = Film;
                 ClassHelper.viewfilm.mGrid.Children.Add(selected);
 
 

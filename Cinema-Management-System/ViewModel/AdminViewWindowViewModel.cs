@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 
 namespace Cinema_Management_System.ViewModel
 {
-   public class AdminViewWindowViewModel:BaseViewModel
+    public class AdminViewWindowViewModel : BaseViewModel
     {
         public ObservableCollection<Film> Films { get; set; }
         public RelayCommand BackButtonClick1 { get; set; }
@@ -30,7 +30,9 @@ namespace Cinema_Management_System.ViewModel
 
         public AdminViewWindowViewModel(AdminViewFilmsWindow adminViewFilmsWindow)
         {
+
             Films = new ObservableCollection<Film>(FakeRepo.Films);
+            Films = MainVindowViewModel.DataBase.Films;
             BackButtonClick1 = new RelayCommand((back) =>
             {
 
@@ -39,13 +41,16 @@ namespace Cinema_Management_System.ViewModel
             });
             SelectedItemChangedCommand = new RelayCommand((c) =>
             {
+                var fi = c as Film;
+
                 ClassHelper.Film.Time = new List<string>();
                 SelectedFilmUserControl selected = new SelectedFilmUserControl();
-                selected.FilmNameTextBlock.Text = ClassHelper.Film.Name;
-                selected.DescriptiontextBlock.Text = ClassHelper.Film.Description;
+                selected.FilmNameTextBlock.Text = fi.Name;
+                selected.DescriptiontextBlock.Text = fi.Description;
                 selected.selectImage.Source = new BitmapImage(new Uri(
-                ClassHelper.Film.ImagePath, UriKind.RelativeOrAbsolute)); 
-                ClassHelper.Film = Film;
+                fi.ImagePath, UriKind.RelativeOrAbsolute));
+                Film = ClassHelper.Film;
+                selected.BookNowButton.Visibility = System.Windows.Visibility.Hidden;
                 ClassHelper.adminView.mGrid.Children.Add(selected);
 
 
