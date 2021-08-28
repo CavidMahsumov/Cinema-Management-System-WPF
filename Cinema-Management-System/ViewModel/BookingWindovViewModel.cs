@@ -79,7 +79,7 @@ namespace Cinema_Management_System.ViewModel
                 TicketWindow ticketWindow1 = new TicketWindow();
                 ticketWindow1.UserNametxtblock.Text =MainVindowViewModel.DataBase.Users[0].Name;
                 ticketWindow1.FilmTxtBlock.Text = MainVindowViewModel.DataBase.Films[0].Name;
-
+                 
                 ticketWindow1.ShowDialog();
                 bookingWindow.Close();
 
