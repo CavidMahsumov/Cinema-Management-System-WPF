@@ -19,6 +19,7 @@ namespace Cinema_Management_System.Extentesion
         public static AdminMainWindow  adminWindow { get; set; }
 
         public static  TicketWindow TicketWindow { get; set; }
+        public static AddFilmWindow AddFilmWindow { get; set; } = new AddFilmWindow();
         public static Film Film { get; set; } = new Film();
     }
 }
