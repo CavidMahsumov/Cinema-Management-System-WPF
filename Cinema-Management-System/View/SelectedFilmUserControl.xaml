@@ -3,18 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Cinema_Management_System.View"
+             xmlns:local="clr-namespace:Cinema_Management_System.View" xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="900">
     <Grid Background="#2e2b30">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
-            <Image x:Name="selectImage" Source="../Images/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg">
-                
-            </Image>
+
+            <wpf:ChromiumWebBrowser Height="200" x:Name="ChromiumBrowser" Margin="0,0,0,0" />
+            <StackPanel>
+                <Image  x:Name="selectImage" Source="../Images/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" Height="408" >
+
+                </Image>
+                <Button Command="{Binding ShowTrailerCommand}" x:Name="ShowTrailer"   FontSize="15" Width="250"   Content="Show Trailer" Style="{StaticResource InformButton}" Height="40"  Margin="8,2,9,2"  />
+            </StackPanel>
         </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -24,7 +29,7 @@
             <Grid Grid.Row="0">
                 <StackPanel>
                     <TextBlock Foreground="White" x:Name="FilmNameTextBlock" Text="Matrix" Margin="60,20,0,0" FontSize="30">
-                        
+
                     </TextBlock>
 
                     <TextBlock Foreground="White" x:Name="DescriptiontextBlock" Text="dweadeswfesfeafewf" Margin="60,50,0,0" FontSize="30">
@@ -32,15 +37,15 @@
                     </TextBlock>
                 </StackPanel>
             </Grid>
-        <Grid Grid.Row="1">
+            <Grid Grid.Row="1">
                 <StackPanel>
-                    
 
-                    
+
+
                     <WrapPanel>
                         <TextBlock Foreground="White" Text="Date: " FontSize="25" Margin="30,110,0,0"/>
                         <TextBlock Foreground="White" x:Name="FilmDatetxtBlock" Text="" FontSize="27" Margin="30,110,0,0">
-                            
+
                         </TextBlock>
                     </WrapPanel>
                     <WrapPanel>
@@ -52,14 +57,14 @@
                     <WrapPanel>
                         <TextBlock Foreground="White" Text="Times: " FontSize="25" Margin="30,0,0,0"/>
                         <TextBlock Foreground="White" x:Name="Timestxtblock" Text="" FontSize="27" Margin="30,0,0,0">
-                          
+
                         </TextBlock>
                     </WrapPanel>
-                    
+
                 </StackPanel>
                 <Button x:Name="BookNowButton"  Command="{Binding BookKnowButtonCommand}"  Style="{StaticResource InformButton}" Foreground="White" FontSize="15" Content="Book Know" Background="#2e2b30" Margin="420,160,0,0" Height="50" Width="100"></Button>
-            
-        </Grid>
+
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

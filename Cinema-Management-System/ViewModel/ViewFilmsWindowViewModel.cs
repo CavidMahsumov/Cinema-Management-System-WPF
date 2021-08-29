@@ -66,7 +66,7 @@ namespace Cinema_Management_System.ViewModel
                 selected.DescriptiontextBlock.Text = fi.Description;
                 selected.selectImage.Source = new BitmapImage(new Uri(
                fi.ImagePath, UriKind.RelativeOrAbsolute));
-               // ClassHelper.Film = Film;
+              ClassHelper.Film = fi;
                 ClassHelper.viewfilm.mGrid.Children.Add(selected);
 
 
