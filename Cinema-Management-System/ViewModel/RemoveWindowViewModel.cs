@@ -19,7 +19,7 @@ namespace Cinema_Management_System.ViewModel
         public ObservableCollection<Film> Films { get; set; } = new ObservableCollection<Film>();
         public RemoveWindowViewModel(RemoveWindow removeWindow)
         {
-            Films = FakeRepo.Films;
+            Films = MainVindowViewModel.DataBase.Films;
             BackButtonCommand = new RelayCommand((r) =>
             {
 

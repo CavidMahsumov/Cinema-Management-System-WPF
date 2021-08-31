@@ -30,7 +30,7 @@
                 <TextBlock FontSize="20" Margin="90,10,0,0" Foreground="White" Text="Sign In"></TextBlock>
 
                 <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="emailtxtBox" Width="200" Height="25" Margin="10,16,10,10"></TextBox>
-                <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="passwordtxtpox" Width="200" Height="25" Margin="10,10,10,10"></TextBox>
+                <PasswordBox Template="{StaticResource TextBoxBaseControlTemplatep }"  x:Name="passwordtxtpox" Width="200" Height="25" Margin="10,10,10,10"></PasswordBox>
                 <Button Command="{Binding sumbitBtnClick}"  Style="{StaticResource InformButton}"   x:Name="SubmitBtn" Height="25" Foreground="White" Content="Submit" Margin="10,5,10,0" >
 
                 </Button>

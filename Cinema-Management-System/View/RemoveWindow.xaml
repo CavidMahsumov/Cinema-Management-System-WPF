@@ -30,7 +30,7 @@
                         FontSize="20"
                         Margin="0,0,20,0"
                         BorderThickness="0"
-                        Command="{Binding BackButtonClick}"
+                        Command="{Binding BackButtonCommand}"
                         HorizontalAlignment="Right"
                         >
 

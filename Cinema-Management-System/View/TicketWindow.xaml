@@ -30,10 +30,10 @@
             <TextBlock FontSize="20" Margin = "10,15,0,0" Name="FilmTxtBlock">
 
             </TextBlock>
-            <TextBlock FontSize="20" Margin = "10,15,0,0" Name="TimeTxtBlock">
+            <TextBlock Text="18:00" FontSize="20" Margin = "10,15,0,0" Name="TimeTxtBlock">
 
             </TextBlock>
-            <TextBlock FontSize="20" Margin = "10,15,0,0" Name="SeatsTxtBlock">
+            <TextBlock Text="26" FontSize="20" Margin = "10,15,0,0" Name="SeatsTxtBlock">
 
             </TextBlock>
         </StackPanel>
@@ -47,7 +47,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button Command="{Binding LogoutBtnCLick}" FontSize="20" FontFamily = "Comic Sans MS" Background="Beige" Content="Log out"  Margin="432,356,224,23"/>
-        <Button FontSize="20" FontFamily = "Comic Sans MS" Background="Beige" Command="{Binding BackButtonClick}" Content="Back"  Margin="197,356,464,23"/>
+        <Button Style="{StaticResource InformButton}"  Command="{Binding LogoutBtnCLick}" FontSize="20" FontFamily = "Comic Sans MS"  Content="Log out"  Margin="432,356,224,23"/>
+        <Button Style="{StaticResource InformButton}" FontSize="20" FontFamily = "Comic Sans MS"  Command="{Binding BackButtonClick}" Content="Back"  Margin="197,356,464,23"/>
     </Grid>
 </Window>
