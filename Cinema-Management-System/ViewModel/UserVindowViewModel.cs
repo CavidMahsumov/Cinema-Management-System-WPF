@@ -11,6 +11,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 namespace Cinema_Management_System.ViewModel
@@ -36,7 +37,8 @@ namespace Cinema_Management_System.ViewModel
             {
                 userWindow.Close();
                 MainWindow = new MainWindow();
-                MainWindow.ShowDialog();
+                //FakeRepo.Count = 0;
+                //MainWindow.ShowDialog();
             });
             EditCommand = new RelayCommand((e) =>
               {
@@ -76,6 +78,7 @@ namespace Cinema_Management_System.ViewModel
             SendMailbuttonCommand = new RelayCommand((sm) =>
             {
                 SendMail.SendMail1(FakeRepo.User.Email);
+                MessageBox.Show("Mail is Sent", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
 
             });
           

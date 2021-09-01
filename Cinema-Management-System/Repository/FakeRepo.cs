@@ -17,6 +17,7 @@ namespace Cinema_Management_System.Repository
         static public ObservableCollection<Film> Films = new ObservableCollection<Film>();
         public static Admin Admin { get; set; }
         public static Admin OldAdmin { get; set; }
+        static public int Count { get; set; }
 
         public static ObservableCollection<Film> getAll()
         {

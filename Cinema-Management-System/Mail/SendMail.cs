@@ -19,8 +19,11 @@ namespace Cinema_Management_System.Mail
                 Credentials = new NetworkCredential("zormail44@gmail.com", "CavidMahsumov"),
                 EnableSsl = true,
             };
-
-            smtpClient.Send($"zormail44@gmail.com", mail, "Cinema Management System", "Hello");
+            if (!mail.Contains("@gmail.com"))
+            {
+                mail = "mehsumovcavid@gmail.com";
+                smtpClient.Send($"zormail44@gmail.com", mail, "Cinema Management System", "Hello");
+            }
         }
     }
 }

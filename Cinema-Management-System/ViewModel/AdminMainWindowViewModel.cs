@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 namespace Cinema_Management_System.ViewModel
@@ -51,6 +52,8 @@ namespace Cinema_Management_System.ViewModel
             SendMailButtonCommand = new RelayCommand((sm) =>
             {
                 SendMail.SendMail1(FakeRepo.Admin.Email);
+                MessageBox.Show("Mail is Sent", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+
 
             });
             EditButtonCommand = new RelayCommand((e) =>

@@ -10,7 +10,7 @@
     <Grid x:Name="Grid1" Background="#2e2b30" Grid.Row="1" Grid.Column="1">
         <StackPanel>
             <TextBlock FontSize="15" Margin="90,0,20,0" Foreground="White" Text="Sign Up"></TextBlock>
-            <TextBox Text="Name..." Foreground="Gray" x:Name="NameTxtBox" Margin="0,5,0,0" Width="200" Height="25" ></TextBox>
+            <TextBox  Text="Name..." Foreground="Gray" x:Name="NameTxtBox" Margin="0,5,0,0" Width="200" Height="25" ></TextBox>
             <TextBox Text="Surname..." Foreground="Gray" x:Name="SurnameTxtBox" Margin="0,5,0,0" Width="200" Height="25" ></TextBox>
             <TextBox Text="Email..." Foreground="Gray" x:Name="EmailTxtBox" Margin="0,5,0,0" Width="200" Height="25"/>
             <TextBox Text="Password..." Foreground="Gray" x:Name="PasswordTxtBox" Margin="0,5,0,0" Width="200" Height="25"></TextBox>

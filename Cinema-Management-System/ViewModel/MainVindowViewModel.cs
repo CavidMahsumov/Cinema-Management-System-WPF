@@ -17,6 +17,7 @@ namespace Cinema_Management_System.ViewModel
 {
     public class MainVindowViewModel : BaseViewModel
     {
+       
         public RegisterControlViewModel RegisterControlViewModel { get; set; }
         public MainWindow mainwindow { get; set; }
         public RelayCommand ClickCommand { get; set; }
@@ -26,6 +27,7 @@ namespace Cinema_Management_System.ViewModel
         public ObservableCollection<Admin> Admins { get; set; } = new ObservableCollection<Admin>();
         public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
         static public DataBase DataBase = new DataBase();
+       static int Count = 0;
 
 
         public MainVindowViewModel(Grid mainGrid, MainWindow mainWindow)
@@ -41,10 +43,13 @@ namespace Cinema_Management_System.ViewModel
             UserWindow = new UserWindow();
             Admins = FakeRepo.GetAdmins();
             Users = FakeRepo.Users;
-            
 
-            sumbitBtnClick = new RelayCommand((b) =>
+
+
+        sumbitBtnClick = new RelayCommand((b) =>
             {
+
+
                 if (FakeRepo.Users != null)
                 {
                     foreach (var item in DataBase.Users)
@@ -69,22 +74,19 @@ namespace Cinema_Management_System.ViewModel
                         {
                             FakeRepo.Admin = item;
                             adminMainWindow.namesurnameblock.Text = $"{item.Name} {item.Surname}";
+                            //mainWindow.Close();
                             adminMainWindow.ShowDialog();
-                            mainWindow.Close();
+                            return;
                         }
-                        else
+                        else if(FakeRepo.Count ==0 )
                         {
-                            int count = 0;
-                            if (count == 0)
-                            {
-
-                                return;
-                            }
-                            ++count;
-                            MessageBox.Show("dadwad");
+                            MessageBox.Show("Mail or Password is Incorrect","Informaion",MessageBoxButton.OK,MessageBoxImage.Warning);
+                            return;
                         }
+
                     }
-                   
+
+
                 }
 
             });
