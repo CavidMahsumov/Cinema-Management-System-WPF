@@ -85,7 +85,7 @@
                             Source="../Images/download__3_-removebg-preview.png">
 
                         </Image>
-                        <Button Style="{StaticResource InformButton}" Margin="0,18,0,0" FontSize="22" Content="Send Mail">
+                        <Button Command="{Binding SendMailButtonCommand}" Background="White" BorderThickness="0" Margin="0,18,0,0" FontSize="22" Content="Send Mail">
 
                         </Button>
                     </WrapPanel>
@@ -112,7 +112,7 @@
                             >
 
                         </Button>
-                        <Image Height="48" HorizontalAlignment="Left" Width="50" Source="../Images/download__4_-removebg-preview.png">
+                        <Image Height="50" HorizontalAlignment="Left" Width="50" Source="../Images/download__4_-removebg-preview.png" Margin="2,9,0,9">
                         </Image>
 
                     </Grid>
